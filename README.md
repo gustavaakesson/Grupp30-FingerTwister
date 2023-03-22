@@ -1,2 +1,2 @@
-# Test-Grupp30
- Test repo för projektgrupp30
+# Grupp30 FingerTwister
+ Repository för projektgrupp 30
