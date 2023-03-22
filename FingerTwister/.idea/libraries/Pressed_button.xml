@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Pressed button">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Pressed button/PressArrowButton.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Pressed button/Pressed button.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
