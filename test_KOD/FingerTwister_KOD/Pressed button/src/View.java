@@ -33,8 +33,8 @@ public class View extends JFrame implements KeyListener {
         Random r = new Random();
         char c = (char)(r.nextInt(26) + ""a"");
         */
-        arr = new String[]{"q", "w", "e", "r", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h"
-                , "j", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
+        arr = new String[]{"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h"
+                , "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
         buttonArr = new ArrayList<>();
 
         for(int i = 0; i < arr.length; i++){
