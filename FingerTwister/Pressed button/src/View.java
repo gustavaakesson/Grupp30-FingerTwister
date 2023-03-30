@@ -1,59 +1,45 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
+import javax.swing.*;
 
 
-public class View extends JFrame implements KeyListener {
+public class View extends JFrame implements KeyListener  {
 
     private JPanel panel;
-    private JButton buttonQ;
-    private JButton buttonW;
-    private JButton buttonE;
-    private JButton buttonR;
-    private JButton buttonT;
-    private JButton buttonY;
-    private JButton buttonU;
+    private Controller controller;
+    private boolean timesUp = false;
+    private int keyCount;
 
-    private JButton buttonI;
-
-    private JButton buttonO;
-    private JButton buttonP;
-    private ArrayList<JButton> buttonArr;
-    private String[] arr;
-    public View() {
-        this.setSize(550,200);
+    public View(Controller controller) {
+        this.controller = controller;
+        this.setSize(500,200);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-/*
-        Random r = new Random();
-        char c = (char)(r.nextInt(26) + ""a"");
-        */
-        arr = new String[]{"q", "w", "e", "r", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h"
-                , "j", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
-        buttonArr = new ArrayList<>();
 
-        for(int i = 0; i < arr.length; i++){
-            JButton button =  new JButton(arr[i]);
-            button.setBackground(Color.GREEN);
+        String[] arr = controller.getArr();
+
+        for (String s : arr) {
+            JButton button = new JButton(s);
             button.addKeyListener(this);
             panel.add(button);
-            buttonArr.add(button);
+            controller.getButtonArr().add(button);
         }
-
 
         //addButtons();
         this.setLocationRelativeTo(null);
         panel.addKeyListener(this);
+
         this.add(panel);
         this.setVisible(true);
     }
 
-    private void addButtons() {
+    //Kod för att skapa alla JButtons separat, detta görs nu av controllern och behövs ej längre.
+    /*private void addButtons() {
         buttonQ = new JButton();
         buttonQ.addKeyListener(this);
         panel.add(buttonQ);
@@ -93,7 +79,7 @@ public class View extends JFrame implements KeyListener {
         buttonP = new JButton();
         buttonP.addKeyListener(this);
         panel.add(buttonP);
-/*
+
         buttonDOWN = new JButton();
         buttonDOWN.addKeyListener(this);
 
@@ -141,36 +127,85 @@ public class View extends JFrame implements KeyListener {
 
         buttonQ = new JButton();
         buttonQ.addKeyListener(this);*/
-    }
-
     @Override
     public void keyTyped(KeyEvent e) {
 
+        System.out.println(e.getKeyChar());
+/*
+        for (JButton button : controller.getButtonArr()) {
+
+            if(Objects.equals(button.getText(), String.valueOf(e.getKeyChar()))) {
+
+                if (button == controller.getLitButton1()) {
+                    button.setBackground(Color.GREEN);
+                    break;
+                }
+
+                if (button == controller.getLitButton2()) {
+                    button.setBackground(Color.GREEN);
+                    break;
+                }
+                keyCount++;
+            }
+        }*/
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println(e.getKeyChar());
-        int keyCode = e.getKeyCode();
 
-        for (JButton button : buttonArr){
-            if (button.getText().equals(String.valueOf(e.getKeyChar()))){
-                button.setBackground(Color.RED);
+    if (timesUp){
+        String name = JOptionPane.showInputDialog(null, "Times Up! Your score = " + keyCount + " Enter your name: ");
+        try {
+            controller.setNewScore(name ,keyCount);
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+    }
+
+    System.out.println(e.getKeyChar());
+
+        for (JButton button : controller.getButtonArr()) {
+
+            if(Objects.equals(button.getText(), String.valueOf(e.getKeyChar()))) {
+
+
+                if (button == controller.getLitButton1()) {
+                    button.setBackground(Color.GREEN);
+                    controller.newButton(button);
+                    keyCount++;
+                    break;
+                }
+
+                if (button == controller.getLitButton2()) {
+
+                    button.setBackground(Color.GREEN);
+                    controller.newButton(button);
+                    keyCount++;
+                    break;
+                }
+
+                this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+                break;
             }
-
         }
     }
 
+
     @Override
     public void keyReleased(KeyEvent e) {
-        int keyCode = e.getKeyCode();
 
-        for (JButton button : buttonArr){
-            if (button.getText().equals(String.valueOf(e.getKeyChar()))){
-                button.setText(button.getText().toLowerCase());
-                button.setBackground(Color.GREEN);
+        for (JButton button : controller.getButtonArr()) {
+
+            if (button.getText().equals(String.valueOf(e.getKeyChar()))) {
+                button.setBackground(null);
+
             }
         }
+    }
+
+    public void buttonLightUp(JButton lightUpButton){
+        lightUpButton.setBackground(Color.YELLOW);
     }
 
     public JPanel getPanel() {
@@ -181,83 +216,11 @@ public class View extends JFrame implements KeyListener {
         this.panel = panel;
     }
 
-    public JButton getButtonQ() {
-        return buttonQ;
+    public boolean isTimesUp() {
+        return timesUp;
     }
 
-    public void setButtonQ(JButton buttonQ) {
-        this.buttonQ = buttonQ;
-    }
-
-    public JButton getButtonW() {
-        return buttonW;
-    }
-
-    public void setButtonW(JButton buttonW) {
-        this.buttonW = buttonW;
-    }
-
-    public JButton getButtonE() {
-        return buttonE;
-    }
-
-    public void setButtonE(JButton buttonE) {
-        this.buttonE = buttonE;
-    }
-
-    public JButton getButtonR() {
-        return buttonR;
-    }
-
-    public void setButtonR(JButton buttonR) {
-        this.buttonR = buttonR;
-    }
-
-    public JButton getButtonT() {
-        return buttonT;
-    }
-
-    public void setButtonT(JButton buttonT) {
-        this.buttonT = buttonT;
-    }
-
-    public JButton getButtonY() {
-        return buttonY;
-    }
-
-    public void setButtonY(JButton buttonY) {
-        this.buttonY = buttonY;
-    }
-
-    public JButton getButtonU() {
-        return buttonU;
-    }
-
-    public void setButtonU(JButton buttonU) {
-        this.buttonU = buttonU;
-    }
-
-    public JButton getButtonI() {
-        return buttonI;
-    }
-
-    public void setButtonI(JButton buttonI) {
-        this.buttonI = buttonI;
-    }
-
-    public JButton getButtonO() {
-        return buttonO;
-    }
-
-    public void setButtonO(JButton buttonO) {
-        this.buttonO = buttonO;
-    }
-
-    public JButton getButtonP() {
-        return buttonP;
-    }
-
-    public void setButtonP(JButton buttonP) {
-        this.buttonP = buttonP;
+    public void setTimesUp(boolean timesUp) {
+        this.timesUp = timesUp;
     }
 }
