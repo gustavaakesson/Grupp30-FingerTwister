@@ -19,7 +19,7 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
     public ScoreBoardViewer() throws HeadlessException {
         super("ScoreBoard");
         this.setSize(500, 200);
-        this.setDefaultCloseOperation(3);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.panel = new JPanel();
         this.textArea = new JTextArea();
         this.textArea.setEditable(false);
