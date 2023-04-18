@@ -1,13 +1,2 @@
- Name: Hannes Score: 13
- Name: Hannes Score: 7
- Name: Hanens Score: 7
- Name: null Score: 2
- Name: Hannes Score: 6
- Name: Hannes Score: 6
- Name: Hanens Score: 6
- Name: Peter Score: 6
- Name: Hannes Score: 5
- Name: null Score: 4
- Name: Hannes Score: 4
- Name: Hannes Score: 7
- Name: null Score: 0
+
+ Name: null Score: 5
