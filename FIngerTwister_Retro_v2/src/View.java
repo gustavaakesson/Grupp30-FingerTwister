@@ -34,6 +34,8 @@ public class View extends JFrame implements KeyListener {
             String s = arr[i];
             JButton button = new JButton(s);
             button.addKeyListener(this);
+            button.setOpaque(true);
+            button.setBorderPainted(false);
             this.panel.add(button);
             controller.getButtonArr().add(button);
         }
@@ -51,14 +53,15 @@ public class View extends JFrame implements KeyListener {
     public void keyPressed(KeyEvent e) {
         if (this.timesUp) {
             String name = JOptionPane.showInputDialog((Component)null, "Times Up! Your score = " + this.keyCount + " Enter your name: ");
-
+            controller.startCountDown();
             try {
                 this.controller.setNewScore(name, this.keyCount);
             } catch (IOException var4) {
                 throw new RuntimeException(var4);
             }
 
-            this.dispatchEvent(new WindowEvent(this, 201));
+             this.dispatchEvent(new WindowEvent(this, 201));
+             controller.startCountDown();
         }
 
         System.out.println(e.getKeyChar());
@@ -69,14 +72,20 @@ public class View extends JFrame implements KeyListener {
             if (Objects.equals(button.getText(), String.valueOf(e.getKeyChar()))) {
                 if (button == this.controller.getLitButton1()) {
                     button.setBackground(Color.GREEN);
+                    button.setOpaque(true);
+                    button.setBorderPainted(false);
                     this.controller.newButton(button);
                     ++this.keyCount;
                 } else if (button == this.controller.getLitButton2()) {
                     button.setBackground(Color.GREEN);
+                    button.setOpaque(true);
+                    button.setBorderPainted(false);
                     this.controller.newButton(button);
                     ++this.keyCount;
                 } else {
+                    JOptionPane.showMessageDialog(null,"You're a dissapointment for your parent and the world!");
                     this.dispatchEvent(new WindowEvent(this, 201));
+                    controller.startCountDown();
                 }
                 break;
             }
@@ -91,6 +100,8 @@ public class View extends JFrame implements KeyListener {
             JButton button = (JButton)var2.next();
             if (button.getText().equals(String.valueOf(e.getKeyChar()))) {
                 button.setBackground((Color)null);
+                button.setOpaque(true);
+                button.setBorderPainted(false);
             }
         }
 
