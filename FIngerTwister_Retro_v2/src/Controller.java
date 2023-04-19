@@ -36,6 +36,8 @@ public class Controller implements ActionListener, Runnable {
 
     public Controller() {
         this.scoreBoard =  new ScoreBoardViewer();
+        new StartingWindow(this);
+        //this.scoreBoard =  new ScoreBoardViewer();
         startCountDown();
     }
 

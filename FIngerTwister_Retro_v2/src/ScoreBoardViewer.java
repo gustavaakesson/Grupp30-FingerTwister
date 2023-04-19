@@ -12,6 +12,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class ScoreBoardViewer extends JFrame implements Runnable {
+    public static void main(String[]args){
+        new ScoreBoardViewer();
+    }
     private JPanel panel;
     private JTextArea textArea;
     private int count;
@@ -32,7 +35,7 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
             var2.printStackTrace();
         }
 
-        this.setSize(300, 40 * this.count);
+        this.setSize(250, 40 * this.count);
         this.add(this.panel);
         this.setVisible(true);
 
@@ -56,14 +59,16 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
 
     public void run() {
         FileReader fr = null;
-        String str = "";
-        while(true) {
 
+        while(true) {
+            String str = "";
+            this.count = 0;
             try {
                 fr = new FileReader("ScoreBoard.txt");
                 BufferedReader br = new BufferedReader(fr);
 
                 for (int i = 0; i < br.read(); ++i) {
+
                     str = str + br.readLine() + "\n";
                     ++this.count;
                 }
@@ -73,7 +78,7 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
             } catch (IOException var5) {
                 var5.printStackTrace();
             }
-
+            this.setSize(250, 22 * this.count);
             this.textArea.setText(str);
 
         }
