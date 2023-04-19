@@ -21,7 +21,6 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
 
     public ScoreBoardViewer() throws HeadlessException {
         super("ScoreBoard");
-        this.setSize(500, 200);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.panel = new JPanel();
         this.textArea = new JTextArea();
@@ -35,7 +34,7 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
             var2.printStackTrace();
         }
 
-        this.setSize(250, 40 * this.count);
+        this.setSize(250, 25 * this.count);
         this.add(this.panel);
         this.setVisible(true);
 
@@ -78,7 +77,7 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
             } catch (IOException var5) {
                 var5.printStackTrace();
             }
-            this.setSize(250, 22 * this.count);
+            this.setSize(250, 24 * this.count);
             this.textArea.setText(str);
 
         }
