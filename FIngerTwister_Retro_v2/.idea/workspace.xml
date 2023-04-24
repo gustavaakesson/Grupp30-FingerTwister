@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fd9965f0-9a56-47fe-a810-584c479772b2" name="Changes" comment="Kod inför RetroMöte">
-      <change afterPath="$PROJECT_DIR$/src/StartingWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreBoard.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/CountdownView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/CountdownView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/ScoreBoardViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/ScoreBoardViewer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CountdownView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CountdownView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScoreBoardViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScoreBoardViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Randomizer/NewIntegerRandom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Randomizer/NewRandomChar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Randomizer/RandomChar.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,5 +79,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kod inför RetroMöte" />
     <option name="LAST_COMMIT_MESSAGE" value="Kod inför RetroMöte" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controller.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
