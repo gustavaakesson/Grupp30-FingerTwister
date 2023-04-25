@@ -10,7 +10,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Objects;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,9 +29,8 @@ public class View extends JFrame implements KeyListener {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        for(int i = 0; i < arr.length; ++i) {
-            String s = arr[i];
-            JButton button = new JButton(s);
+        for (String StringArray : arr) {
+            JButton button = new JButton(StringArray);
             button.addKeyListener(this);
             button.setOpaque(true);
             button.setBorderPainted(false);
@@ -50,9 +48,27 @@ public class View extends JFrame implements KeyListener {
         System.out.println(e.getKeyChar());
     }
 
+
+
+    /**
+     This code is part of a Java Swing application and represents a method that handles the key pressed event (keyPressed(KeyEvent e)).
+     It performs different actions based on the key event and current state of the application.
+
+     @param e The KeyEvent object representing the key press event.
+     @throws RuntimeException if an IOException occurs while setting a new score.
+     @see KeyEvent
+     @see Component
+     @see JOptionPane
+     @see WindowEvent
+     @see JButton
+     @see Color
+     @since 2023-04-25
+
+     @author [Theodor Bäckstrand]
+     */
     public void keyPressed(KeyEvent e) {
         if (this.timesUp) {
-            String name = JOptionPane.showInputDialog((Component)null, "Times Up! Your score = " + this.keyCount + " Enter your name: ");
+            String name = JOptionPane.showInputDialog(null, "Times Up! Your score = " + this.keyCount + " Enter your name: ");
             controller.startCountDown();
             try {
                 this.controller.setNewScore(name, this.keyCount);
@@ -65,10 +81,8 @@ public class View extends JFrame implements KeyListener {
         }
 
         System.out.println(e.getKeyChar());
-        Iterator var5 = this.controller.getButtonArr().iterator();
 
-        while(var5.hasNext()) {
-            JButton button = (JButton)var5.next();
+        for (JButton button : this.controller.getButtonArr()) {
             if (Objects.equals(button.getText(), String.valueOf(e.getKeyChar()))) {
                 if (button == this.controller.getLitButton1()) {
                     button.setBackground(Color.GREEN);
@@ -83,7 +97,7 @@ public class View extends JFrame implements KeyListener {
                     this.controller.newButton(button);
                     ++this.keyCount;
                 } else {
-                    JOptionPane.showMessageDialog(null,"You're a dissapointment for your parent and the world!");
+                    JOptionPane.showMessageDialog(null, "You're a dissapointment for your parent and the world!");
                     this.dispatchEvent(new WindowEvent(this, 201));
                     controller.startCountDown();
                 }
@@ -93,18 +107,25 @@ public class View extends JFrame implements KeyListener {
 
     }
 
+    /**
+     This code is part of a Java Swing application and represents a method that handles the key released event (keyReleased(KeyEvent e)).
+     It updates the appearance of buttons based on the key release event.
+     @param e The KeyEvent object representing the key release event.
+     @see KeyEvent
+     @see JButton
+     @see Color
+     @since 2023-04-25
+     @author [Theodor Bäckstrand]
+     */
     public void keyReleased(KeyEvent e) {
-        Iterator var2 = this.controller.getButtonArr().iterator();
 
-        while(var2.hasNext()) {
-            JButton button = (JButton)var2.next();
+        for (JButton button : this.controller.getButtonArr()) {
             if (button.getText().equals(String.valueOf(e.getKeyChar()))) {
-                button.setBackground((Color)null);
+                button.setBackground(null);
                 button.setOpaque(true);
                 button.setBorderPainted(false);
             }
         }
-
     }
 
     public void buttonLightUp(JButton lightUpButton) {
