@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd9965f0-9a56-47fe-a810-584c479772b2" name="Changes" comment="Kod inför RetroMöte">
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Scoreboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/CountdownPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/GamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/StartingPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreBoard.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/CountdownView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/CountdownView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/ScoreBoardViewer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/StartingWindow$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/StartingWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CountdownView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CountdownView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScoreBoardViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ScoreBoardViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/StartingWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -31,13 +57,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/senna/IdeaProjects/Grupp30-FingerTwister/FIngerTwister_Retro&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/senna/IdeaProjects/Grupp30-FingerTwister/FIngerTwister_Retro",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -70,7 +99,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Omstrukturering_Gustav" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -79,16 +120,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kod inför RetroMöte" />
     <option name="LAST_COMMIT_MESSAGE" value="Kod inför RetroMöte" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

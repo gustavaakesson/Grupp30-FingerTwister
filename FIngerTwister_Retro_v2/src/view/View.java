@@ -1,16 +1,16 @@
-//
+package view;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
 
+import controller.Controller;
+
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Objects;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,12 +30,15 @@ public class View extends JFrame implements KeyListener {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        for(int i = 0; i < arr.length; ++i) {
+        for (int i = 0; i < arr.length; ++i) {
             String s = arr[i];
             JButton button = new JButton(s);
             button.addKeyListener(this);
             button.setOpaque(true);
             button.setBorderPainted(false);
+            button.setForeground(Color.BLUE);
+            button.setBackground(Color.PINK);
+            button.setVisible(true);
             this.panel.add(button);
             controller.getButtonArr().add(button);
         }
@@ -52,7 +55,7 @@ public class View extends JFrame implements KeyListener {
 
     public void keyPressed(KeyEvent e) {
         if (this.timesUp) {
-            String name = JOptionPane.showInputDialog((Component)null, "Times Up! Your score = " + this.keyCount + " Enter your name: ");
+            String name = JOptionPane.showInputDialog(null, "Times Up! Your score = " + this.keyCount + " Enter your name: ");
             controller.startCountDown();
             try {
                 this.controller.setNewScore(name, this.keyCount);
@@ -65,10 +68,8 @@ public class View extends JFrame implements KeyListener {
         }
 
         System.out.println(e.getKeyChar());
-        Iterator var5 = this.controller.getButtonArr().iterator();
 
-        while(var5.hasNext()) {
-            JButton button = (JButton)var5.next();
+        for (JButton button : this.controller.getButtonArr()) {
             if (Objects.equals(button.getText(), String.valueOf(e.getKeyChar()))) {
                 if (button == this.controller.getLitButton1()) {
                     button.setBackground(Color.GREEN);
@@ -83,7 +84,7 @@ public class View extends JFrame implements KeyListener {
                     this.controller.newButton(button);
                     ++this.keyCount;
                 } else {
-                    JOptionPane.showMessageDialog(null,"You're a dissapointment for your parent and the world!");
+                    JOptionPane.showMessageDialog(null, "You're a disappointment for your parent and the world!");
                     this.dispatchEvent(new WindowEvent(this, 201));
                     controller.startCountDown();
                 }
@@ -94,12 +95,10 @@ public class View extends JFrame implements KeyListener {
     }
 
     public void keyReleased(KeyEvent e) {
-        Iterator var2 = this.controller.getButtonArr().iterator();
 
-        while(var2.hasNext()) {
-            JButton button = (JButton)var2.next();
+        for (JButton button : this.controller.getButtonArr()) {
             if (button.getText().equals(String.valueOf(e.getKeyChar()))) {
-                button.setBackground((Color)null);
+                button.setBackground(null);
                 button.setOpaque(true);
                 button.setBorderPainted(false);
             }
