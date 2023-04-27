@@ -12,7 +12,8 @@ public class CountdownPanel extends JPanel implements ActionListener  {
     private JLabel countdownLabel;
     private Controller controller;
 
-    public CountdownPanel(Controller controller) {
+    public CountdownPanel(Controller controller, View view) {
+        countdownLabel = new JLabel();
         countdownLabel.setText("Countdown");
 
         setSize(300, 200);
@@ -42,6 +43,13 @@ public class CountdownPanel extends JPanel implements ActionListener  {
         timer.start();
         setVisible(true);
     }
+    /*
+    public void startCountDown() {
+        this.timer.start();
+        this.thread = new Thread(this);
+    }
+
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {

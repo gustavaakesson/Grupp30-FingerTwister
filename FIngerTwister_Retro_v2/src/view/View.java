@@ -17,18 +17,34 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class View extends JFrame implements KeyListener {
+public class View extends JFrame{
     private JPanel panel;
+
+    private JPanel gamePanel;
+
+    private JPanel countDownPanel;
+    private JPanel scoreBoardPanel;
+    private JPanel startingPanel;
     private Controller controller;
     private boolean timesUp = false;
     private int keyCount;
-
     public View(Controller controller) {
         this.controller = controller;
-        String[] arr = controller.getArr();
-        this.setSize(500, 200);
+        this.setSize(1200,600);
+        createPanels();
+        addPanels();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+       // this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+
+       // addButtons();
+
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+    }
+
+/*
+    private void addButtons() {
+        String[] arr = controller.getArr();
 
         for (int i = 0; i < arr.length; ++i) {
             String s = arr[i];
@@ -42,13 +58,25 @@ public class View extends JFrame implements KeyListener {
             this.panel.add(button);
             controller.getButtonArr().add(button);
         }
-
-        this.setLocationRelativeTo(null);
-        this.panel.addKeyListener(this);
-        this.add(this.panel);
-        this.setVisible(true);
     }
 
+ */
+    private void createPanels() {
+        startingPanel = new StartingPanel(this);
+        gamePanel = new GamePanel(this);
+        scoreBoardPanel = new ScoreboardPanel(this);
+        countDownPanel = new CountdownPanel(controller, this);
+
+
+    }
+
+    private void addPanels() {
+        this.add(startingPanel);
+        this.add(gamePanel);
+        this.add(scoreBoardPanel);
+        this.add(countDownPanel);
+    }
+/*
     public void keyTyped(KeyEvent e) {
         System.out.println(e.getKeyChar());
     }
@@ -106,6 +134,8 @@ public class View extends JFrame implements KeyListener {
 
     }
 
+ */
+
     public void buttonLightUp(JButton lightUpButton) {
         lightUpButton.setBackground(Color.YELLOW);
     }
@@ -125,7 +155,47 @@ public class View extends JFrame implements KeyListener {
     public void setTimesUp(boolean timesUp) {
         this.timesUp = timesUp;
     }
+
     public String[] getKeyboardArray(){
         return controller.getArr();
+    }
+    public JPanel getGamePanel() {
+        return gamePanel;
+    }
+
+    public void setGamePanel(JPanel gamePanel) {
+        this.gamePanel = gamePanel;
+    }
+
+    public JPanel getCountDownPanel() {
+        return countDownPanel;
+    }
+
+    public void setCountDownPanel(JPanel countDownPanel) {
+        this.countDownPanel = countDownPanel;
+    }
+
+    public JPanel getScoreBoardPanel() {
+        return scoreBoardPanel;
+    }
+
+    public void setScoreBoardPanel(JPanel scoreBoardPanel) {
+        this.scoreBoardPanel = scoreBoardPanel;
+    }
+
+    public JPanel getStartingPanel() {
+        return startingPanel;
+    }
+
+    public void setStartingPanel(JPanel startingPanel) {
+        this.startingPanel = startingPanel;
+    }
+
+    public Controller getController() {
+        return controller;
+    }
+
+    public void setController(Controller controller) {
+        this.controller = controller;
     }
 }

@@ -33,23 +33,13 @@ public class Controller implements ActionListener, Runnable {
     private StartingWindow startingWindow;
     private ScoreBoardViewer scoreBoard;
 
-    public JButton getLitButton1() {
-        return this.litButton1;
-    }
-
-    public JButton getLitButton2() {
-        return this.litButton2;
-    }
-
     public Controller() {
-        this.scoreBoard =  new ScoreBoardViewer();
-        new StartingWindow(this);
-        this.scoreBoard =  new ScoreBoardViewer();
-        startCountDown();
-    }
+        this.view = new View(this);
+
+
+     }
 
     public void startGame() {
-        this.view = new View(this);
 
         this.litButton1 = this.randomize_new_button();
         this.litButton2 = this.randomize_new_button();
@@ -62,11 +52,7 @@ public class Controller implements ActionListener, Runnable {
     }
 
 
-    public void startCountDown() {
-        this.timer.start();
-        new CountdownView(this);
-        this.thread = new Thread(this);
-    }
+
 
     public JButton randomize_new_button() {
         JButton jButton = null;
@@ -89,10 +75,10 @@ public class Controller implements ActionListener, Runnable {
     public Timer getTimer() {
         return this.timer;
     }
+
     public void setTimer(Timer timer) {
         this.timer = timer;
     }
-
     public void setNewScore(String name, int score) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("ScoreBoard.txt", true));
         String playerNameScore = String.format(" Name: %s Score: %d", name, score);
@@ -157,5 +143,13 @@ public class Controller implements ActionListener, Runnable {
 
     public void nextGame() {
         this.view = new View(this);
+    }
+
+    public JButton getLitButton1() {
+        return this.litButton1;
+    }
+
+    public JButton getLitButton2() {
+        return this.litButton2;
     }
 }
