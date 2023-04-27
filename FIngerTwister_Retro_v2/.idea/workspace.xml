@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd9965f0-9a56-47fe-a810-584c479772b2" name="Changes" comment="Kod inför RetroMöte">
-      <change afterPath="$PROJECT_DIR$/src/StartingWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreBoard.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/CountdownView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/CountdownView.class" afterDir="false" />
+    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Cleared ScoreBoard.txt &amp;&amp; removed startingWindow">
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/ScoreBoardViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/ScoreBoardViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CountdownView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CountdownView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScoreBoardViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScoreBoardViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Randomizer/NewIntegerRandom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Randomizer/NewRandomChar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Randomizer/RandomChar.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,42 +22,55 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2NjDHwSfvvlSYpYvCVpM8iHnIw6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2ObP4qzTC2kpsipinoGZd0g7w2u" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/senna/IdeaProjects/Grupp30-FingerTwister/FIngerTwister_Retro&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
+    "last_opened_file_path": "C:/Users/senna/OneDrive/Dokument/GitHub/Test-Grupp30/FIngerTwister_Retro_v2"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application">
+}]]></component>
+  <component name="RunManager" selected="Application.ScoreBoardViewer">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="FIngerTwister_Retro" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreBoardViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ScoreBoardViewer" />
+      <module name="FIngerTwister_Retro" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ScoreBoardViewer" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fd9965f0-9a56-47fe-a810-584c479772b2" name="Changes" comment="" />
-      <created>1680168513509</created>
+      <changelist id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="" />
+      <created>1681826123672</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1680168513509</updated>
+      <updated>1681826123672</updated>
     </task>
-    <task id="LOCAL−00001" summary="Kod inför RetroMöte">
-      <created>1680170091957</created>
+    <task id="LOCAL−00001" summary="Cleared ScoreBoard.txt &amp;&amp; removed startingWindow">
+      <created>1681826782072</created>
       <option name="number" value="LOCAL−00001" />
       <option name="presentableId" value="LOCAL−00001" />
-      <updated>1680170091957</updated>
+      <updated>1681826782072</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -85,7 +87,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Kod inför RetroMöte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kod inför RetroMöte" />
+    <MESSAGE value="Cleared ScoreBoard.txt &amp;&amp; removed startingWindow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleared ScoreBoard.txt &amp;&amp; removed startingWindow" />
   </component>
 </project>
