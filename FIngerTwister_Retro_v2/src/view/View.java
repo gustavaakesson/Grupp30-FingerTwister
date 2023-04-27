@@ -3,7 +3,7 @@ package view;//
 // (powered by FernFlower decompiler)
 //
 
-import controller.Controller;
+import controller.*;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -36,8 +36,8 @@ public class View extends JFrame implements KeyListener {
             button.addKeyListener(this);
             button.setOpaque(true);
             button.setBorderPainted(false);
-            button.setForeground(Color.BLUE);
-            button.setBackground(Color.PINK);
+            button.setForeground(Color.BLACK);
+            button.setBackground(Color.RED);
             button.setVisible(true);
             this.panel.add(button);
             controller.getButtonArr().add(button);
@@ -98,7 +98,7 @@ public class View extends JFrame implements KeyListener {
 
         for (JButton button : this.controller.getButtonArr()) {
             if (button.getText().equals(String.valueOf(e.getKeyChar()))) {
-                button.setBackground(null);
+                button.setBackground(Color.RED);
                 button.setOpaque(true);
                 button.setBorderPainted(false);
             }
@@ -124,5 +124,8 @@ public class View extends JFrame implements KeyListener {
 
     public void setTimesUp(boolean timesUp) {
         this.timesUp = timesUp;
+    }
+    public String[] getKeyboardArray(){
+        return controller.getArr();
     }
 }
