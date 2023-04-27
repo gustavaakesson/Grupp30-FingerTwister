@@ -4,31 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd9965f0-9a56-47fe-a810-584c479772b2" name="Changes" comment="Added empty classes for easier structure with Frames and Panels in the GUI">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fd9965f0-9a56-47fe-a810-584c479772b2" name="Changes" comment="Halvfärdig omstrukturereing">
+      <change afterPath="$PROJECT_DIR$/src/view/gamePanelManager.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/gamePanelManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreBoard.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Scoreboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Scoreboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreBoardViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreBoardViewer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/CountdownPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CountdownPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/StartingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/StartingPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/StartingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/StartingWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/StartingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GameModePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +95,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1682492126493</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Halvfärdig omstrukturereing">
+      <created>1682595084203</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1682595084203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kod inför RetroMöte" />
     <MESSAGE value="Added empty classes for easier structure with Frames and Panels in the GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added empty classes for easier structure with Frames and Panels in the GUI" />
+    <MESSAGE value="Halvfärdig omstrukturereing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Halvfärdig omstrukturereing" />
   </component>
 </project>

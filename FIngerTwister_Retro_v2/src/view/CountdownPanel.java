@@ -16,7 +16,7 @@ public class CountdownPanel extends JPanel implements ActionListener  {
         countdownLabel = new JLabel();
         countdownLabel.setText("Countdown");
 
-        setSize(300, 200);
+        this.setSize(300, 200);
 
 
         // Create the countdown label

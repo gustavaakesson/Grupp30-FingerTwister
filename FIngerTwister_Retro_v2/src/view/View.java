@@ -5,32 +5,28 @@ package view;//
 
 import controller.*;
 
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.WindowEvent;
-import java.io.IOException;
-import java.util.Objects;
+import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 
 public class View extends JFrame{
     private JPanel panel;
 
     private JPanel gamePanel;
+    private gamePanelManager gamePanelManager;
 
     private JPanel countDownPanel;
     private JPanel scoreBoardPanel;
     private JPanel startingPanel;
     private Controller controller;
     private boolean timesUp = false;
-    private int keyCount;
+    private BorderLayout borderLayout = new BorderLayout();
     public View(Controller controller) {
         this.controller = controller;
-        this.setSize(1200,600);
+        this.setLayout(borderLayout);
+        this.setSize(1000,600);
         createPanels();
         addPanels();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -39,6 +35,7 @@ public class View extends JFrame{
        // addButtons();
 
         this.setLocationRelativeTo(null);
+
         this.setVisible(true);
     }
 
@@ -62,19 +59,17 @@ public class View extends JFrame{
 
  */
     private void createPanels() {
-        startingPanel = new StartingPanel(this);
+        startingPanel = new GameModePanel(this);
         gamePanel = new GamePanel(this);
         scoreBoardPanel = new ScoreboardPanel(this);
         countDownPanel = new CountdownPanel(controller, this);
-
-
     }
 
     private void addPanels() {
-        this.add(startingPanel);
-        this.add(gamePanel);
-        this.add(scoreBoardPanel);
-        this.add(countDownPanel);
+        this.add((startingPanel),BorderLayout.NORTH);
+        this.add((gamePanel),BorderLayout.CENTER);
+        this.add((scoreBoardPanel),BorderLayout.WEST);
+        this.add((countDownPanel),BorderLayout.EAST);
     }
 /*
     public void keyTyped(KeyEvent e) {

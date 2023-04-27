@@ -32,6 +32,15 @@ public class Controller implements ActionListener, Runnable {
     private Thread thread;
     private StartingWindow startingWindow;
     private ScoreBoardViewer scoreBoard;
+    private int keyCount;
+
+    public int getKeyCount() {
+        return keyCount;
+    }
+
+    public void setKeyCount(int keyCount) {
+        this.keyCount = keyCount;
+    }
 
     public Controller() {
         this.view = new View(this);
