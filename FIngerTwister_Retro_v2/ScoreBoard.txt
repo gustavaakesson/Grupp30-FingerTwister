@@ -1,6 +1,13 @@
-Peter
-Hannes
-Sven
-Kristina
-Gustav
-Theo
+ Name: Gustav Score: 2
+ Name: null Score: 2
+ Name: null Score: 0
+ Name: null Score: 2
+ Name: null Score: 1
+ Name: null Score: 1
+ Name: null Score: 3
+ Name: Gustav Score: 7
+ Name: null Score: 7
+ Name: null Score: 6
+ Name: null Score: 0
+ Name: Hannes Score: 10
+ Name: Test1 Score: 6

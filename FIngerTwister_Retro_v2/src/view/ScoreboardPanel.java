@@ -1,32 +1,20 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
+package view;
 
-import java.awt.HeadlessException;
+import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
-public class ScoreBoardViewer extends JFrame implements Runnable {
-    public static void main(String[]args){
-        new ScoreBoardViewer();
-    }
-    private JPanel panel;
+public class ScoreboardPanel extends JPanel implements Runnable {
+    private View view;
     private JTextArea textArea;
     private int count;
 
-    public ScoreBoardViewer() throws HeadlessException {
-        super("ScoreBoard");
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.panel = new JPanel();
+    public ScoreboardPanel(View view) throws HeadlessException {
         this.textArea = new JTextArea();
         this.textArea.setEditable(false);
-        this.panel.add(this.textArea);
-        this.setLocationRelativeTo(null);
+        this.add(this.textArea);
 
         try {
             this.setTextArea();
@@ -34,8 +22,7 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
             var2.printStackTrace();
         }
 
-        this.setSize(250, 25 * this.count);
-        this.add(this.panel);
+        this.setSize(250, 24 * this.count);
         this.setVisible(true);
 
         Thread thread = new Thread(this);
@@ -77,7 +64,6 @@ public class ScoreBoardViewer extends JFrame implements Runnable {
             } catch (IOException var5) {
                 var5.printStackTrace();
             }
-            this.setSize(250, 24 * this.count);
             this.textArea.setText(str);
 
         }

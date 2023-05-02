@@ -1,19 +1,16 @@
-//
+package view;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
 
-import java.awt.BorderLayout;
-import java.awt.Font;
+import controller.Controller;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.*;
-import java.awt.event.*;
 
 
 public class CountdownView extends JFrame implements ActionListener {
@@ -35,7 +32,7 @@ public class CountdownView extends JFrame implements ActionListener {
 
         // Create the timer
         timer = new Timer(1000, new ActionListener() {
-            int count = 5;
+            int count = 1;
             public void actionPerformed(ActionEvent e) {
                 count--;
                 if (count >= 1) {

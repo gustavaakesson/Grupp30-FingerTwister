@@ -1,3 +1,7 @@
+package view;
+
+import controller.Controller;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -20,7 +24,7 @@ public class StartingWindow extends JFrame {
         startItem = new JMenuItem("Start");
         startItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                controller.startCountDown();
+              //  controller.startCountDown();
             }
         });
         gameMenu.add(startItem);

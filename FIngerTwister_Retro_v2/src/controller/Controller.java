@@ -1,3 +1,10 @@
+package controller;
+import view.*;
+import model.*;
+
+
+
+
 //
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
@@ -18,31 +25,30 @@ import javax.swing.Timer;
 public class Controller implements ActionListener, Runnable {
     private String[] arr = new String [] {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
     private View view ;
-    private ArrayList<JButton> buttonArr = new ArrayList();
+    private ArrayList<JButton> buttonArr = new ArrayList<>();
     private JButton litButton1;
     private JButton litButton2;
     private Timer timer = new Timer(10000, this);
     private Thread thread;
     private StartingWindow startingWindow;
     private ScoreBoardViewer scoreBoard;
+    private int keyCount;
 
-    public JButton getLitButton1() {
-        return this.litButton1;
+    public int getKeyCount() {
+        return keyCount;
     }
 
-    public JButton getLitButton2() {
-        return this.litButton2;
+    public void setKeyCount(int keyCount) {
+        this.keyCount = keyCount;
     }
 
     public Controller() {
-        this.scoreBoard =  new ScoreBoardViewer();
-        new StartingWindow(this);
-        this.scoreBoard =  new ScoreBoardViewer();
-        startCountDown();
-    }
+        this.view = new View(this);
+
+
+     }
 
     public void startGame() {
-        this.view = new View(this);
 
         this.litButton1 = this.randomize_new_button();
         this.litButton2 = this.randomize_new_button();
@@ -55,16 +61,12 @@ public class Controller implements ActionListener, Runnable {
     }
 
 
-    public void startCountDown() {
-        this.timer.start();
-        CountdownView countDown = new CountdownView(this);
-        this.thread = new Thread(this);
-    }
+
 
     public JButton randomize_new_button() {
         JButton jButton = null;
-        Random r = new Random();
-        int randomInt = r.nextInt(this.arr.length);
+        Random random = new Random();
+        int randomInt = random.nextInt(this.arr.length);
         String randomLetter = this.arr[randomInt];
 
         for (int i = 0 ; i < arr.length; i++){
@@ -82,16 +84,16 @@ public class Controller implements ActionListener, Runnable {
     public Timer getTimer() {
         return this.timer;
     }
+
     public void setTimer(Timer timer) {
         this.timer = timer;
     }
-
     public void setNewScore(String name, int score) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter("ScoreBoard.txt", true));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("ScoreBoard.txt", true));
         String playerNameScore = String.format(" Name: %s Score: %d", name, score);
-        bw.write(playerNameScore);
-        bw.newLine();
-        bw.close();
+        bufferedWriter.write(playerNameScore);
+        bufferedWriter.newLine();
+        bufferedWriter.close();
     }
 
     public void newButton(JButton button) {
@@ -150,5 +152,13 @@ public class Controller implements ActionListener, Runnable {
 
     public void nextGame() {
         this.view = new View(this);
+    }
+
+    public JButton getLitButton1() {
+        return this.litButton1;
+    }
+
+    public JButton getLitButton2() {
+        return this.litButton2;
     }
 }
