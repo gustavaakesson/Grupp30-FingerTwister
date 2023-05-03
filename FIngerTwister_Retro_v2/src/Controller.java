@@ -1,3 +1,12 @@
+<<<<<<< Updated upstream:FIngerTwister_Retro_v2/src/Controller.java
+=======
+package controller;
+import OldFiles.ScoreBoardViewer;
+import OldFiles.StartingWindow;
+import view.*;
+
+
+>>>>>>> Stashed changes:FIngerTwister_Retro_v2/src/controller/Controller.java
 //
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
@@ -9,7 +18,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Objects;
 import java.util.Random;
 import javax.swing.JButton;
@@ -62,6 +70,7 @@ public class Controller implements ActionListener, Runnable {
     }
 
     public JButton randomize_new_button() {
+
         JButton jButton = null;
         Random r = new Random();
         int randomInt = r.nextInt(this.arr.length);

@@ -19,6 +19,14 @@ import javax.swing.JPanel;
 
 public class View extends JFrame implements KeyListener {
     private JPanel panel;
+<<<<<<< Updated upstream:FIngerTwister_Retro_v2/src/View.java
+=======
+
+    private JPanel gamePanel;
+    private JPanel countDownPanel;
+    private JPanel scoreBoardPanel;
+    private JPanel startingPanel;
+>>>>>>> Stashed changes:FIngerTwister_Retro_v2/src/view/View.java
     private Controller controller;
     private boolean timesUp = false;
     private int keyCount;
