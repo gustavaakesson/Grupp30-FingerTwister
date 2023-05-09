@@ -12,13 +12,8 @@ import java.util.Objects;
 
 public class GamePanel extends JPanel implements KeyListener {
     private View view;
-    private String[] arr = new String [] {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
-    private static final String[][] key = {
-            {"`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Backspace"},
-            {"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\"},
-            {"Caps", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "Enter"},
-            {"Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift", "\u2191"},
-            {" ", "\u2190", "\u2193", "\u2192"}};
+    //private String[] arr = new String [] {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a",
+                     // "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
 
 
     public GamePanel(View view){
@@ -50,20 +45,24 @@ public class GamePanel extends JPanel implements KeyListener {
         c.anchor = GridBagConstraints.WEST;
         c.weightx = 1d;
 
-        for (int row = 0; row < key.length; ++row) {
+        for (int row = 0; row < view.getController().getArr().length; ++row) {
             pRow = new JPanel(new GridBagLayout());
 
             c.gridy = row;
 
-            for (int col = 0; col < key[row].length; ++col)
-                pRow.add(new JButton(key[row][col]));
+            for (int col = 0; col < view.getController().getArr()[row].length; ++col){
+                JButton button = new JButton(view.getController().getArr()[row][col]);
+                pRow.add(button);
+                view.getController().getButtonArr().add(button);
+                button.addKeyListener(this);
+            }
 
             this.add(pRow, c);
         }
     }
-
+/*
     private void addButtons() {
-        String[] arr = view.getController().getArr();
+        String[][] arr = view.getController().getArr();
 
         for (int i = 0; i < arr.length; ++i) {
             String s = arr[i];
@@ -78,12 +77,14 @@ public class GamePanel extends JPanel implements KeyListener {
             view.getController().getButtonArr().add(button);
         }
     }
+
+ */
+
     @Override
     public void keyTyped(KeyEvent e) {
-      //  System.out.println("You typed: "+e.getKeyChar());
+        System.out.println("You typed: "+e.getKeyChar());
 
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
         System.out.println("You pressed: "+e.getKeyChar());
@@ -147,5 +148,4 @@ public class GamePanel extends JPanel implements KeyListener {
             }
         }
     }
-
 }

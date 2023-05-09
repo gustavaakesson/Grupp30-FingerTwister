@@ -23,7 +23,12 @@ import javax.swing.JButton;
 import javax.swing.Timer;
 
 public class Controller implements ActionListener, Runnable {
-    private String[] arr = new String [] {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"};
+    private final String[][] arr = {
+            {"`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Backspace"},
+            {"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\"},
+            {"Caps", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "Enter"},
+            {"Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift", "\u2191"},
+            {" ", "\u2190", "\u2193", "\u2192"}};
     private View view ;
     private ArrayList<JButton> buttonArr = new ArrayList<>();
     private JButton litButton1;
@@ -44,20 +49,18 @@ public class Controller implements ActionListener, Runnable {
 
     public Controller() {
         this.view = new View(this);
-
-
      }
 
     public void startGame() {
 
         this.litButton1 = this.randomize_new_button();
         this.litButton2 = this.randomize_new_button();
-
+/*
         while(Objects.equals(this.litButton2.getText(), this.litButton1.getText())){
 
             this.litButton2 = this.randomize_new_button();
             this.litButton1 = this.randomize_new_button();
-        }
+       }*/
     }
 
 
@@ -67,16 +70,26 @@ public class Controller implements ActionListener, Runnable {
         JButton jButton = null;
         Random random = new Random();
         int randomInt = random.nextInt(this.arr.length);
-        String randomLetter = this.arr[randomInt];
+        String randomLetter = "";
 
-        for (int i = 0 ; i < arr.length; i++){
-            if (Objects.equals(buttonArr.get(i).getText(), randomLetter)) {
-                view.buttonLightUp(buttonArr.get(i));
-                jButton = buttonArr.get(i);
-                break;
+
+        for (int i = 0 ; i < arr.length -1; i++){
+
+            int randomInt2 = random.nextInt(this.arr[i].length);
+            randomLetter = this.arr[randomInt][randomInt2];
+
+        }
+        for (int i = 0; i < arr.length - 1; i++){
+
+            for (int j = 0; j < arr[i].length; j++) {
+
+                if (Objects.equals(buttonArr.get(i).getText(), randomLetter)) {
+                    view.buttonLightUp(buttonArr.get(i));
+                    jButton = buttonArr.get(i);
+                    break;
+                }
             }
         }
-
         return jButton;
     }
 
@@ -107,12 +120,8 @@ public class Controller implements ActionListener, Runnable {
 
     }
 
-    public String[] getArr() {
-        return this.arr;
-    }
-
-    public void setArr(String[] arr) {
-        this.arr = arr;
+    public String[][] getArr() {
+        return arr;
     }
 
     public ArrayList<JButton> getButtonArr() {

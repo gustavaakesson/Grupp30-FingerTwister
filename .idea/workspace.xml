@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386c9fb1-f3ed-4668-a684-eff262daa01d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/ScoreBoard.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/model/Scoreboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/model/Scoreboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/CountdownPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/CountdownPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/CountdownView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/CountdownView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/CountdownView.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/CountdownView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/ScoreBoardViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/ScoreBoardViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +24,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/senna/OneDrive/Dokument/GitHub/Test-Grupp30/FIngerTwister_Retro_v2",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/senna/OneDrive/Dokument/GitHub/Test-Grupp30/FIngerTwister_Retro_v2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Game" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />

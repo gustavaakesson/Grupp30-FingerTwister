@@ -9,7 +9,6 @@ import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class View extends JFrame{
     private JPanel panel;
@@ -151,7 +150,7 @@ public class View extends JFrame{
         this.timesUp = timesUp;
     }
 
-    public String[] getKeyboardArray(){
+    public String[][] getKeyboardArray(){
         return controller.getArr();
     }
     public JPanel getGamePanel() {
