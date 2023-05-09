@@ -44,7 +44,8 @@ public class Controller implements ActionListener, Runnable {
     }
 
     public void startGame() {
-        view.getGamePanel().something();
+        view.getGamePanel().setFocusable(true);
+        view.getGamePanel().requestFocusInWindow();
 
         this.litButton1 = this.randomize_new_button();
         this.litButton2 = this.randomize_new_button();
@@ -53,6 +54,7 @@ public class Controller implements ActionListener, Runnable {
 
             this.litButton2 = this.randomize_new_button();
             this.litButton1 = this.randomize_new_button();
+
        }
     }
 

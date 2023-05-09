@@ -54,13 +54,14 @@ public class GamePanel extends JPanel implements KeyListener {
 
             for (int col = 0; col < view.getController().getArr()[row].length; ++col){
                 JButton button = new JButton(view.getController().getArr()[row][col]);
+                button.addKeyListener(this);
                 pRow.add(button);
                 view.getController().getButtonArr().add(button);
-                button.addKeyListener(this);
             }
 
             this.add(pRow, c);
         }
+
     }
     public void something(){
         System.out.println("Nu är den i gamePanel");
@@ -86,6 +87,9 @@ public class GamePanel extends JPanel implements KeyListener {
  */
     public void makeLitButton(JButton lightUpButton) {
         lightUpButton.setBackground(Color.YELLOW);
+        lightUpButton.setOpaque(true);
+        lightUpButton.setBorderPainted(false);
+        lightUpButton.setVisible(true);
     }
 
     @Override
@@ -115,11 +119,13 @@ public class GamePanel extends JPanel implements KeyListener {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
                     button.setBorderPainted(false);
+                    button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
                 } else if (button == view.getController().getLitButton2()) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
                     button.setBorderPainted(false);
+                    button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
                 } else {
                     JOptionPane.showMessageDialog(null, "You missed the button, You lose!");
@@ -133,6 +139,7 @@ public class GamePanel extends JPanel implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
         System.out.println("You pressed "+e.getKeyChar());
+
 
         for (JButton button : view.getController().getButtonArr()) {
             if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))) {
@@ -155,5 +162,7 @@ public class GamePanel extends JPanel implements KeyListener {
                 break;
             }
         }
+
+
     }
 }
