@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Cleared ScoreBoard.txt &amp;&amp; removed startingWindow">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CountdownPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CountdownPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GameModePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GameModePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
@@ -92,7 +93,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1682595084203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Working Keyboard">
+      <created>1683619813509</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1683619813509</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +129,7 @@
     <MESSAGE value="Kod inför RetroMöte" />
     <MESSAGE value="Added empty classes for easier structure with Frames and Panels in the GUI" />
     <MESSAGE value="Halvfärdig omstrukturereing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Halvfärdig omstrukturereing" />
+    <MESSAGE value="Working Keyboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Keyboard" />
   </component>
 </project>

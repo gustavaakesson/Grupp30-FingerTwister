@@ -3,6 +3,7 @@ package view;
 import controller.*;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -20,6 +21,7 @@ public class GamePanel extends JPanel implements KeyListener {
         this.view = view;
         this.setSize(new Dimension(480, 250));
         setBounds(200,200,200,200);
+        this.setBorder(new LineBorder(Color.BLACK));
 
         view.add(this);
         createKeyboard();
@@ -60,6 +62,9 @@ public class GamePanel extends JPanel implements KeyListener {
             this.add(pRow, c);
         }
     }
+    public void something(){
+        System.out.println("Nu är den i gamePanel");
+    }
 /*
     private void addButtons() {
         String[][] arr = view.getController().getArr();
@@ -79,6 +84,9 @@ public class GamePanel extends JPanel implements KeyListener {
     }
 
  */
+    public void makeLitButton(JButton lightUpButton) {
+        lightUpButton.setBackground(Color.YELLOW);
+    }
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -102,7 +110,7 @@ public class GamePanel extends JPanel implements KeyListener {
         System.out.println(e.getKeyChar());
 
         for (JButton button : view.getController().getButtonArr()) {
-            if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))) {
+            if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))   ) {
                 if (button == view.getController().getLitButton1()) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
@@ -129,13 +137,13 @@ public class GamePanel extends JPanel implements KeyListener {
         for (JButton button : view.getController().getButtonArr()) {
             if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))) {
                 if (button == view.getController().getLitButton1()) {
-                    button.setBackground(Color.LIGHT_GRAY);
+                    button.setBackground(null);
                     button.setOpaque(true);
                     button.setBorderPainted(false);
                     view.getController().newButton(button);
 
                 } else if (button == view.getController().getLitButton2()) {
-                    button.setBackground(Color.LIGHT_GRAY);
+                    button.setBackground(null);
                     button.setOpaque(true);
                     button.setBorderPainted(false);
                     view.getController().newButton(button);
