@@ -5,6 +5,7 @@ import controller.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
@@ -22,11 +23,11 @@ public class GamePanel extends JPanel implements KeyListener {
         this.setSize(new Dimension(480, 250));
         setBounds(200,200,200,200);
         this.setBorder(new LineBorder(Color.BLACK));
-
+        this.setFocusable(true);
         view.add(this);
         createKeyboard();
-        //this.addButtons();
         this.setVisible(true);
+
     }
 
     public void createKeyboard(){
@@ -55,6 +56,7 @@ public class GamePanel extends JPanel implements KeyListener {
             for (int col = 0; col < view.getController().getArr()[row].length; ++col){
                 JButton button = new JButton(view.getController().getArr()[row][col]);
                 button.addKeyListener(this);
+                button.setOpaque(true);
                 pRow.add(button);
                 view.getController().getButtonArr().add(button);
             }
@@ -88,18 +90,19 @@ public class GamePanel extends JPanel implements KeyListener {
     public void makeLitButton(JButton lightUpButton) {
         lightUpButton.setBackground(Color.YELLOW);
         lightUpButton.setOpaque(true);
-        lightUpButton.setBorderPainted(false);
         lightUpButton.setVisible(true);
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("You typed: "+e.getKeyChar());
+        System.out.println("You typed: "+e.getExtendedKeyCode());
 
     }
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("You pressed: "+e.getKeyChar());
+        System.out.println("You pressed: "+KeyEvent.getKeyText(e.getKeyCode()));
+
+
 
         if (view.isTimesUp()) {
             String name = JOptionPane.showInputDialog(null, "Times Up! Your score = " + view.getController().getKeyCount() + " Enter your name: ");
@@ -111,20 +114,18 @@ public class GamePanel extends JPanel implements KeyListener {
 
         }
 
-        System.out.println(e.getKeyChar());
+      //  System.out.println(KeyEvent.getKeyText(e.getKeyCode()));
 
         for (JButton button : view.getController().getButtonArr()) {
-            if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))   ) {
+            if (button.getText().equalsIgnoreCase(KeyEvent.getKeyText(e.getKeyChar()))   ) {
                 if (button == view.getController().getLitButton1()) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
                     button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
                 } else if (button == view.getController().getLitButton2()) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
                     button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
                 } else {
@@ -138,7 +139,7 @@ public class GamePanel extends JPanel implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println("You pressed "+e.getKeyChar());
+        System.out.println("You released "+e.getKeyChar());
 
 
         for (JButton button : view.getController().getButtonArr()) {
@@ -146,13 +147,11 @@ public class GamePanel extends JPanel implements KeyListener {
                 if (button == view.getController().getLitButton1()) {
                     button.setBackground(null);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
                     view.getController().newButton(button);
 
                 } else if (button == view.getController().getLitButton2()) {
                     button.setBackground(null);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
                     view.getController().newButton(button);
 
                 }/* else {

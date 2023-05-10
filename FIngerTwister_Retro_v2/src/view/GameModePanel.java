@@ -36,7 +36,10 @@ public class GameModePanel extends JPanel implements ActionListener {
             if (count == 0){
                 secTimer.stop();
                 startButton.setText("STOP");
+                // transferFocus används för att ge fokus till GamePanel i fönstret för att den ska lyssna efter keystrokes.
+                view.getGamePanel().transferFocus();
                 view.getController().startGame();
+
             }
         }
     }

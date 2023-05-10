@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard with some debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GameModePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GameModePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1683619813509</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Working Keyboard with some debugging">
+      <created>1683639127455</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1683639127455</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +138,7 @@
     <MESSAGE value="Added empty classes for easier structure with Frames and Panels in the GUI" />
     <MESSAGE value="Halvfärdig omstrukturereing" />
     <MESSAGE value="Working Keyboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Keyboard" />
+    <MESSAGE value="Working Keyboard with some debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Keyboard with some debugging" />
   </component>
 </project>
