@@ -10,6 +10,7 @@ import model.*;
 // (powered by FernFlower decompiler)
 //
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -35,16 +36,29 @@ public class Controller implements ActionListener, Runnable {
     private JButton litButton2;
     private Timer timer = new Timer(5000, this);
     private Thread thread;
-    private StartingWindow startingWindow;
-    private ScoreBoardViewer scoreBoard;
     private int keyCount;
+    private GameMode2 gm2 = new GameMode2(this);
+
 
     public Controller() {
         this.view = new View(this);
     }
 
+    public void onePlayerStartGame(){
+        gm2 = new GameMode2(this);
+    }
+
+    public void twoPlayerStartGame(){
+
+        gm2 = new GameMode2(this);
+
+        while(gm2.isRunning()){
+            gm2.nextButtonP1();
+            gm2.nextButtonP2();
+        }
+    }
+
     public void startGame() {
-        view.getGamePanel().something();
 
         this.litButton1 = this.randomize_new_button();
         this.litButton2 = this.randomize_new_button();
@@ -55,10 +69,6 @@ public class Controller implements ActionListener, Runnable {
             this.litButton1 = this.randomize_new_button();
        }
     }
-
-
-
-
     public JButton randomize_new_button() {
         JButton jButton = null;
         Random random = new Random();
@@ -82,14 +92,13 @@ public class Controller implements ActionListener, Runnable {
         return jButton;
     }
 
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() instanceof Timer) {
+            this.view.setTimesUp(true);
+        }
 
-    public Timer getTimer() {
-        return this.timer;
     }
 
-    public void setTimer(Timer timer) {
-        this.timer = timer;
-    }
 
     public void setNewScore(String name, int score) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("ScoreBoard.txt", true));
@@ -119,13 +128,6 @@ public class Controller implements ActionListener, Runnable {
 
     public void setButtonArr(ArrayList<JButton> buttonArr) {
         this.buttonArr = buttonArr;
-    }
-
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() instanceof Timer) {
-            this.view.setTimesUp(true);
-        }
-
     }
 
     public void run() {
@@ -159,5 +161,21 @@ public class Controller implements ActionListener, Runnable {
 
     public void setKeyCount(int keyCount) {
         this.keyCount = keyCount;
+    }
+
+    public Timer getTimer() {
+        return this.timer;
+    }
+
+    public void setTimer(Timer timer) {
+        this.timer = timer;
+    }
+
+    public GameMode2 getGm2() {
+        return gm2;
+    }
+
+    public void setGm2(GameMode2 gm2) {
+        this.gm2 = gm2;
     }
 }

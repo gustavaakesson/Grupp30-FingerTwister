@@ -12,6 +12,7 @@ public class ScoreboardPanel extends JPanel implements Runnable {
     private int count;
 
     public ScoreboardPanel(View view) throws HeadlessException {
+        this.view = view;
         this.textArea = new JTextArea();
         this.textArea.setEditable(false);
         this.add(this.textArea);

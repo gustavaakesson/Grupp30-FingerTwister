@@ -62,9 +62,6 @@ public class GamePanel extends JPanel implements KeyListener {
             this.add(pRow, c);
         }
     }
-    public void something(){
-        System.out.println("Nu är den i gamePanel");
-    }
 /*
     private void addButtons() {
         String[][] arr = view.getController().getArr();
