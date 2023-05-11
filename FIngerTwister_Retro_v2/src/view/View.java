@@ -9,17 +9,16 @@ import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class View extends JFrame{
     private JPanel panel;
 
-    private JPanel gamePanel;
+    private GamePanel gamePanel;
     private gamePanelManager gamePanelManager;
 
-    private JPanel countDownPanel;
+    private CountdownPanel countDownPanel;
     private JPanel scoreBoardPanel;
-    private JPanel startingPanel;
+    private GameModePanel startingPanel;
     private Controller controller;
     private boolean timesUp = false;
     private BorderLayout borderLayout = new BorderLayout();
@@ -35,7 +34,6 @@ public class View extends JFrame{
        // addButtons();
 
         this.setLocationRelativeTo(null);
-
         this.setVisible(true);
     }
 
@@ -62,7 +60,7 @@ public class View extends JFrame{
         startingPanel = new GameModePanel(this);
         gamePanel = new GamePanel(this);
         scoreBoardPanel = new ScoreboardPanel(this);
-        countDownPanel = new CountdownPanel(controller, this);
+        countDownPanel = new CountdownPanel(this);
     }
 
     private void addPanels() {
@@ -131,9 +129,7 @@ public class View extends JFrame{
 
  */
 
-    public void buttonLightUp(JButton lightUpButton) {
-        lightUpButton.setBackground(Color.YELLOW);
-    }
+
 
     public JPanel getPanel() {
         return this.panel;
@@ -151,22 +147,22 @@ public class View extends JFrame{
         this.timesUp = timesUp;
     }
 
-    public String[] getKeyboardArray(){
+    public String[][] getKeyboardArray(){
         return controller.getArr();
     }
-    public JPanel getGamePanel() {
+    public GamePanel getGamePanel() {
         return gamePanel;
     }
 
-    public void setGamePanel(JPanel gamePanel) {
+    public void setGamePanel(GamePanel gamePanel) {
         this.gamePanel = gamePanel;
     }
 
-    public JPanel getCountDownPanel() {
+    public CountdownPanel getCountDownPanel() {
         return countDownPanel;
     }
 
-    public void setCountDownPanel(JPanel countDownPanel) {
+    public void setCountDownPanel(CountdownPanel countDownPanel) {
         this.countDownPanel = countDownPanel;
     }
 
@@ -182,7 +178,7 @@ public class View extends JFrame{
         return startingPanel;
     }
 
-    public void setStartingPanel(JPanel startingPanel) {
+    public void setStartingPanel(GameModePanel startingPanel) {
         this.startingPanel = startingPanel;
     }
 
