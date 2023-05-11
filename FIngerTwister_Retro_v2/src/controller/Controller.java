@@ -38,6 +38,7 @@ public class Controller implements ActionListener, Runnable {
     private StartingWindow startingWindow;
     private Scoreboard scoreBoard;
     private int keyCount;
+    private GameMode2 gm2;
 
     public Controller() {
         this.view = new View(this);
@@ -124,7 +125,9 @@ public class Controller implements ActionListener, Runnable {
         }
 
     }
-
+    public void runGm2(){
+        new GameMode2(view);
+    }
     public void run() {
         this.startGame();
     }
@@ -156,5 +159,13 @@ public class Controller implements ActionListener, Runnable {
 
     public void setKeyCount(int keyCount) {
         this.keyCount = keyCount;
+    }
+
+    public GameMode2 getGm2() {
+        return gm2;
+    }
+
+    public void setGm2(GameMode2 gm2) {
+        this.gm2 = gm2;
     }
 }

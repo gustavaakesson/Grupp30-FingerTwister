@@ -15,6 +15,18 @@ public class ScoreboardPanel extends JPanel implements Runnable {
     public ScoreboardPanel(View view) throws HeadlessException {
         this.view = view;
         this.textArea = new JTextArea();
+
+        JLabel scoreBoardText = new JLabel("Scoreboard");
+        Font font = new Font("BOLD", Font.BOLD, 24);
+        scoreBoardText.setFont(font);
+        scoreBoardText.setBackground(null);
+        this.add(scoreBoardText, BorderLayout.NORTH);
+
+        textArea.setPreferredSize(new Dimension(400,1100));
+        Font bigFont = new Font("Italic", Font.ITALIC, 24);
+        textArea.setFont(bigFont);
+        textArea.setBackground(null);
+
         this.textArea.setEditable(false);
         this.add(this.textArea);
         scoreboard = new Scoreboard();
@@ -25,7 +37,6 @@ public class ScoreboardPanel extends JPanel implements Runnable {
             var2.printStackTrace();
         }
 
-        this.setSize(250, 24 * this.count);
         this.setVisible(true);
 
         Thread thread = new Thread(this);

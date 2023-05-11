@@ -18,23 +18,10 @@ public class TwisterPanel extends JPanel implements KeyListener {
 
         view.add(this);
         createKeyboard();
-        //this.addButtons();
         this.setVisible(true);
-
-        view.getController().getGm2().nextButtonP1();
     }
 
     public void createKeyboard(){
-        /*
-        for (int i = 0; i < arr.length; ++i) {
-            String s = arr[i];
-            JButton button = new JButton(s);
-            button.addKeyListener(this);
-            button.setOpaque(true);
-            button.setBorderPainted(false);
-            button.setVisible(true);
-            this.add(button);
-        }*/
         this.setLayout(new GridBagLayout());
 
         JPanel pRow;
@@ -57,25 +44,6 @@ public class TwisterPanel extends JPanel implements KeyListener {
             this.add(pRow, c);
         }
     }
-    /*
-        private void addButtons() {
-            String[][] arr = view.getController().getArr();
-
-            for (int i = 0; i < arr.length; ++i) {
-                String s = arr[i];
-                JButton button = new JButton(s);
-                button.addKeyListener(this);
-                button.setOpaque(true);
-                button.setBorderPainted(false);
-                button.setForeground(Color.BLACK);
-                button.setBackground(Color.LIGHT_GRAY);
-                button.setVisible(true);
-                this.add(button);
-                view.getController().getButtonArr().add(button);
-            }
-        }
-
-     */
     public void makeLitButton(JButton lightUpButton) {
         lightUpButton.setBackground(Color.YELLOW);
     }

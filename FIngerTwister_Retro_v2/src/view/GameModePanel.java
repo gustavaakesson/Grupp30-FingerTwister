@@ -4,23 +4,40 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class GameModePanel extends JPanel implements ActionListener {
     private View view;
-    private ArrayList<String> choices = new ArrayList<>();
+    private JComboBox<String> gameModeChoser;
+    private String [] choices = new String[]{"FingerTwister", "TypingRace"};
     private JButton startButton;
     private int count = 5;
     private Timer secTimer;
     public GameModePanel(View view) {
         this.view = view;
+        addGameModeChoser();
+        addStartButton();
 
+    }
+
+    private void addGameModeChoser() {
+        gameModeChoser = new JComboBox<>(choices);
+        gameModeChoser.addActionListener(this);
+        gameModeChoser.setPreferredSize(new Dimension(300,100));
+        gameModeChoser.setFont(new Font("Font.ITALIC",Font.ITALIC,30));
+
+        JLabel gameModeText = new JLabel("Gamemode:");
+        gameModeText.setFont(new Font("Font.ITALIC",Font.ITALIC,30));
+
+        this.add(gameModeText);
+        this.add(gameModeChoser);
+    }
+
+    private void addStartButton() {
         startButton = new JButton("Start");
         startButton.setFont(new Font("Font.ITALIC",Font.ITALIC,54));
         startButton.addActionListener(this);
         startButton.setPreferredSize(new Dimension(300,100));
         this.add(startButton);
-
     }
 
     @Override
@@ -43,8 +60,26 @@ public class GameModePanel extends JPanel implements ActionListener {
                 //view.setGamePanel(new GamePanel(view));
                 view.getController().startGame();
 
-
             }
         }
+
+        if (e.getSource() == getGameModeChoser()){
+            for ( int i = 0; i < choices.length;i++ ){
+                if (e.getSource() == "FingerTwister"){
+                    JOptionPane.showMessageDialog(null,"You are now playing FingerTwister!");
+                }
+                if (e.getSource() == "TypingRace"){
+                    JOptionPane.showMessageDialog(null,"You are now playing TypingRace!");
+                }
+            }
+        }
+    }
+
+    public JComboBox<String> getGameModeChoser() {
+        return gameModeChoser;
+    }
+
+    public void setGameModeChoser(JComboBox<String> gameModeChoser) {
+        this.gameModeChoser = gameModeChoser;
     }
 }

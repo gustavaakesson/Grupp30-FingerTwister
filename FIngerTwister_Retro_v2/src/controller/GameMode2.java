@@ -1,5 +1,7 @@
 package controller;
 
+import view.View;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,17 +10,18 @@ import java.util.Queue;
 public class GameMode2 implements Runnable{
 
     private Controller controller;
-    private boolean running = false;
+    private View view;
+    private boolean running = true;
     private List <JButton> player1 = new ArrayList<>();
+    private List <JButton> player2 = new ArrayList<>();
     private int player1Counter;
     private int player2Counter;
-    private List <JButton> player2 = new ArrayList<>();
     private boolean player1Lost = false;
     private boolean player2Lost = false;
 
 
-    public GameMode2(Controller controller) {
-        this.controller = controller;
+    public GameMode2(View view) {
+        this.view = view;
     }
 
     public void nextButtonP1(){
@@ -39,8 +42,40 @@ public class GameMode2 implements Runnable{
 
     @Override
     public void run() {
+        this.startGameMode2();
+    }
+
+    public void startGameMode2(){
+        if (running) {
+
+            if (player2 == null) {
+                nextButtonP1();
+            } else {
+                nextButtonP1();
+                nextButtonP2();
+            }
+        }
+    }
+    public void nextRound(){
+
+        if (running) {
+
+            if (player2 == null) {
+                nextButtonP1();
+            } else if (checkStatus()) {
+                JOptionPane.showMessageDialog(null, "A player lost");
+            } else {
+                nextButtonP1();
+                nextButtonP2();
+            }
+        }
 
     }
+
+    private boolean checkStatus() {
+        return !player1Lost;
+    }
+
 
     public boolean isRunning() {
         return running;

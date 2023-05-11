@@ -34,16 +34,18 @@ public class Scoreboard {
         bufferedWriter.write(playerNameScore);
         bufferedWriter.newLine();
         bufferedWriter.close();
+        sortScoreBoard();
     }
     public void sortScoreBoard(){
-        int minScore = 1000;
+        int minScore = 0;
         int checkedScore;
+        int biggestScore = 0;
         int scores[] = new int[scoreBoard.length];
         for(int i=0; i<scoreBoard.length; i++){
            checkedScore = Integer.parseInt(String.valueOf(scoreBoard[i].startsWith("Score: ")));
            scores[i] = Integer.parseInt(String.valueOf(scoreboardArr.get(i).startsWith("Score: ")));
-           if(checkedScore>0 ){
-
+           if(checkedScore > biggestScore ){
+                biggestScore = scores[i];
            }
         }
 

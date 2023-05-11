@@ -20,9 +20,9 @@ public class GamePanel extends JPanel implements KeyListener {
 
     public GamePanel(View view){
         this.view = view;
-        this.setSize(new Dimension(480, 250));
-        setBounds(200,200,200,200);
-        this.setBorder(new LineBorder(Color.BLACK));
+        this.setSize(new Dimension(960, 500));
+        //setBounds(200,200,200,200);
+        //this.setBorder(new LineBorder(Color.BLACK));
         this.setFocusable(true);
         view.add(this);
         createKeyboard();
@@ -43,7 +43,7 @@ public class GamePanel extends JPanel implements KeyListener {
         }*/
         this.setLayout(new GridBagLayout());
 
-        JPanel pRow;
+        JPanel pRow = new JPanel();
         GridBagConstraints c = new GridBagConstraints();
         c.anchor = GridBagConstraints.WEST;
         c.weightx = 1d;
@@ -57,6 +57,7 @@ public class GamePanel extends JPanel implements KeyListener {
                 JButton button = new JButton(view.getController().getArr()[row][col]);
                 button.addKeyListener(this);
                 button.setBorderPainted(true);
+                button.setPreferredSize(new Dimension(65, 50)); // set the preferred size to 50x50
                 pRow.add(button);
                 view.getController().getButtonArr().add(button);
             }

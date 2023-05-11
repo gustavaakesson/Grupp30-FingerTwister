@@ -6,9 +6,8 @@ package view;//
 import controller.*;
 
 import java.awt.*;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+import javax.swing.border.Border;
 
 public class View extends JFrame{
     private JPanel panel;
@@ -30,7 +29,7 @@ public class View extends JFrame{
         createPanels();
         addPanels();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-       // this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        // this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
        // addButtons();
 
@@ -61,14 +60,17 @@ public class View extends JFrame{
         startingPanel = new GameModePanel(this);
         gamePanel = new GamePanel(this);
         scoreBoardPanel = new ScoreboardPanel(this);
-        countDownPanel = new CountdownPanel(this);
     }
 
     private void addPanels() {
         this.add((startingPanel),BorderLayout.NORTH);
         this.add((gamePanel),BorderLayout.CENTER);
         this.add((scoreBoardPanel),BorderLayout.WEST);
-        this.add((countDownPanel),BorderLayout.EAST);
+    }
+
+    public void startGameMode2(){
+        TwisterPanel twister = new TwisterPanel(this);
+        this.add(twister);
     }
 /*
     public void keyTyped(KeyEvent e) {
