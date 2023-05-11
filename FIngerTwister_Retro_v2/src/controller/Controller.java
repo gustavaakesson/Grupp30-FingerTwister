@@ -35,7 +35,6 @@ public class Controller implements ActionListener, Runnable {
     private JButton litButton2;
     private Timer timer = new Timer(5000, this);
     private Thread thread;
-    private StartingWindow startingWindow;
     private ScoreBoardViewer scoreBoard;
     private int keyCount;
 
