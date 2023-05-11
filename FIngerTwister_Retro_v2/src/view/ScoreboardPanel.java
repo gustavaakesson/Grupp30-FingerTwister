@@ -16,11 +16,12 @@ public class ScoreboardPanel extends JPanel implements Runnable {
         this.view = view;
         this.textArea = new JTextArea();
 
+        /*
         JLabel scoreBoardText = new JLabel("Scoreboard");
         Font font = new Font("BOLD", Font.BOLD, 24);
         scoreBoardText.setFont(font);
         scoreBoardText.setBackground(null);
-        this.add(scoreBoardText, BorderLayout.NORTH);
+        this.add(scoreBoardText, BorderLayout.NORTH);*/
 
         textArea.setPreferredSize(new Dimension(400,1100));
         Font bigFont = new Font("Italic", Font.ITALIC, 24);

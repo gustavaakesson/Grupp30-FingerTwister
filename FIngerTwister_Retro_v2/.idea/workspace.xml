@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3357fe9-fcba-4d82-baf9-b53e29e94904" name="Changes" comment="har finslipat lite saker och ting!" />
+    <list default="true" id="d3357fe9-fcba-4d82-baf9-b53e29e94904" name="Changes" comment="har finslipat lite saker och ting!">
+      <change afterPath="$PROJECT_DIR$/src/JframeTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GameModePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GameModePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +51,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />

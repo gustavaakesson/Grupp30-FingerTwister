@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="386c9fb1-f3ed-4668-a684-eff262daa01d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/src/view/View.java" afterDir="false" />
-    </list>
+    <list default="true" id="386c9fb1-f3ed-4668-a684-eff262daa01d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -23,20 +23,19 @@ public class View extends JFrame{
     private BorderLayout borderLayout = new BorderLayout();
     public View(Controller controller) {
         this.controller = controller;
-        this.setLayout(borderLayout);
+        setupFrame();
+    }
 
+    public void setupFrame(){
+        this.setLayout(borderLayout);
         this.setSize(getMaximumSize());
         createPanels();
         addPanels();
+        this.setBackground(Color.BLACK);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        // this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-
-       // addButtons();
-
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
-
 /*
     private void addButtons() {
         String[] arr = controller.getArr();

@@ -12,24 +12,47 @@ public class GameModePanel extends JPanel implements ActionListener {
     private JButton startButton;
     private int count = 5;
     private Timer secTimer;
+    private JLabel gameModeText;
+    private JLabel emptyLabel;
+    private JLabel scoreboardText;
+
     public GameModePanel(View view) {
         this.view = view;
-        addGameModeChoser();
+        addNorthPanel();
+    }
+
+    private void addNorthPanel() {
         addStartButton();
+        addGameModeComboBox();
+        addGameModePanel();
+        addScoreboardText();
+
+        this.add(scoreboardText);
+        this.add(addEmptyLabel500());
+        this.add(startButton);
+        this.add(addEmptyLabel300());
+        this.add(emptyLabel);
+        this.add(gameModeText);
+        this.add(gameModeChoser);
 
     }
 
-    private void addGameModeChoser() {
+    private void addScoreboardText() {
+        scoreboardText = new JLabel("Scoreboard");
+        scoreboardText.setFont(new Font("Font.ITALIC",Font.BOLD,35));
+        scoreboardText.setPreferredSize(new Dimension(300,100));
+    }
+
+    private void addGameModePanel() {
+        gameModeText = new JLabel("Gamemode:");
+        gameModeText.setFont(new Font("Font.ITALIC",Font.ITALIC,30));
+    }
+
+    private void addGameModeComboBox() {
         gameModeChoser = new JComboBox<>(choices);
         gameModeChoser.addActionListener(this);
         gameModeChoser.setPreferredSize(new Dimension(300,100));
         gameModeChoser.setFont(new Font("Font.ITALIC",Font.ITALIC,30));
-
-        JLabel gameModeText = new JLabel("Gamemode:");
-        gameModeText.setFont(new Font("Font.ITALIC",Font.ITALIC,30));
-
-        this.add(gameModeText);
-        this.add(gameModeChoser);
     }
 
     private void addStartButton() {
@@ -37,8 +60,19 @@ public class GameModePanel extends JPanel implements ActionListener {
         startButton.setFont(new Font("Font.ITALIC",Font.ITALIC,54));
         startButton.addActionListener(this);
         startButton.setPreferredSize(new Dimension(300,100));
-        this.add(startButton);
     }
+
+    private JLabel addEmptyLabel500(){
+        emptyLabel = new JLabel();
+        emptyLabel.setPreferredSize(new Dimension(500,100));
+        return emptyLabel;
+    }
+    private JLabel addEmptyLabel300(){
+        emptyLabel = new JLabel();
+        emptyLabel.setPreferredSize(new Dimension(300,100));
+        return emptyLabel;
+    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
