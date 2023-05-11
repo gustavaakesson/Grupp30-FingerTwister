@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class StartMenu {
     public StartMenu() {
 
-        JFrame frame = new JFrame("Null Layout Example");
+        JFrame frame = new JFrame();
         frame.setLayout(null);
 
         JButton multiplayerButton = new JButton("Multiplayer");
