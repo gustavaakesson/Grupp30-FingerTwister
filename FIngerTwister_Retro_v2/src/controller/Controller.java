@@ -24,11 +24,11 @@ import javax.swing.Timer;
 
 public class Controller implements ActionListener, Runnable {
     private final String[][] arr = {
-            {"`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "Backspace"},
-            {"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "Å", "¨", "'"},
-            {"Caps", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Ö", "Ä", "Enter"},
-            {"Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "-", "Shift", "\u2191"},
-            {" ", "\u2190", "\u2193", "\u2192"}};
+            {"\u001B", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "\u232B"},
+            {"\u21E5", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "Å", "¨", "'"},
+            {"\u21EA", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Ö", "Ä", "\u23CE"},
+            {"\u21E7", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "-", "\u21E7", "\u2191"},
+            {"fn", "\u2190", "\u2193", "\u2192"}};
     private View view ;
     private ArrayList<JButton> buttonArr = new ArrayList<>();
     private JButton litButton1;
@@ -36,7 +36,7 @@ public class Controller implements ActionListener, Runnable {
     private Timer timer = new Timer(5000, this);
     private Thread thread;
     private StartingWindow startingWindow;
-    private ScoreBoardViewer scoreBoard;
+    private Scoreboard scoreBoard;
     private int keyCount;
 
     public Controller() {
@@ -44,35 +44,27 @@ public class Controller implements ActionListener, Runnable {
     }
 
     public void startGame() {
-        
-
         this.litButton1 = this.randomize_new_button();
         this.litButton2 = this.randomize_new_button();
+        view.getCountDownPanel().startGameTimer();
 
         while(Objects.equals(this.litButton2.getText(), this.litButton1.getText())){
-
             this.litButton2 = this.randomize_new_button();
             this.litButton1 = this.randomize_new_button();
-
        }
     }
-
-
-
-
     public JButton randomize_new_button() {
         JButton jButton = null;
         Random random = new Random();
         int randomInt = random.nextInt(this.arr.length - 1);
         String randomLetter = "";
 
-
         for (int i = 0 ; i < arr.length -1; i++){
 
             int randomInt2 = random.nextInt(this.arr[i].length - 1);
             randomLetter = this.arr[randomInt][randomInt2];
-
         }
+
         for (JButton button : buttonArr) {
             if (Objects.equals(button.getText(), randomLetter)) {
                 view.getGamePanel().makeLitButton(button);
@@ -108,6 +100,10 @@ public class Controller implements ActionListener, Runnable {
             this.litButton2 = this.randomize_new_button();
         }
 
+    }
+    public void newScore(String name, int score) throws IOException {
+        this.scoreBoard = new Scoreboard();
+        this.scoreBoard.setNewScore(name, score);
     }
 
     public String[][] getArr() {

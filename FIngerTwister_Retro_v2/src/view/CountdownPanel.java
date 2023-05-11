@@ -12,7 +12,10 @@ public class CountdownPanel extends JPanel implements ActionListener  {
     private JLabel countdownLabel;
     private Controller controller;
     private View view;
-    private int totCount = 5;
+
+
+
+    private int count = 5;
 
     public CountdownPanel(View view) {
         this.view = view;
@@ -23,7 +26,7 @@ public class CountdownPanel extends JPanel implements ActionListener  {
 
 
         // Create the countdown label
-        countdownLabel = new JLabel("5");
+        countdownLabel = new JLabel(String.valueOf(count));
         countdownLabel.setFont(countdownLabel.getFont().deriveFont(64.0f));
         countdownLabel.setHorizontalAlignment(SwingConstants.CENTER);
         this.add(countdownLabel);
@@ -32,17 +35,20 @@ public class CountdownPanel extends JPanel implements ActionListener  {
 
         // Create the timer
     public void startGameTimer() {
+        count = 5;
         timer = new Timer(1000, new ActionListener() {
-            int count = 1;
+
 
             public void actionPerformed(ActionEvent e) {
                 count--;
                 if (count >= 1) {
-                    countdownLabel.setText(Integer.toString(count));
+                    countdownLabel.setText(String.valueOf(count));
                 } else {
                     timer.stop();
-                    view.getController().startGame();
-                    countdownLabel.setText(" ");
+                   // view.getController().startGame();
+
+                    countdownLabel.setText("0");
+
                 }
             }
         });
@@ -56,6 +62,14 @@ public class CountdownPanel extends JPanel implements ActionListener  {
         this.thread = new Thread(this);
     }
 */
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
 
 
     @Override

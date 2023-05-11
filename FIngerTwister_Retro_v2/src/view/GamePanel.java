@@ -56,7 +56,7 @@ public class GamePanel extends JPanel implements KeyListener {
             for (int col = 0; col < view.getController().getArr()[row].length; ++col){
                 JButton button = new JButton(view.getController().getArr()[row][col]);
                 button.addKeyListener(this);
-                button.setOpaque(true);
+                button.setBorderPainted(true);
                 pRow.add(button);
                 view.getController().getButtonArr().add(button);
             }
@@ -95,7 +95,8 @@ public class GamePanel extends JPanel implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("You typed: "+e.getExtendedKeyCode());
+       // System.out.println("You typed: "+e.getExtendedKeyCode());
+       // System.out.println(e.getSource().toString());
 
     }
     @Override
@@ -114,22 +115,30 @@ public class GamePanel extends JPanel implements KeyListener {
 
         }
 
-      //  System.out.println(KeyEvent.getKeyText(e.getKeyCode()));
 
         for (JButton button : view.getController().getButtonArr()) {
-            if (button.getText().equalsIgnoreCase(KeyEvent.getKeyText(e.getKeyChar()))   ) {
-                if (button == view.getController().getLitButton1()) {
+            if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))) {
+                if (button.equals(view.getController().getLitButton1())) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
                     button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
-                } else if (button == view.getController().getLitButton2()) {
+                    view.getCountDownPanel().setCount(5);
+                  //  view.getCountDownPanel().startGameTimer();
+
+
+
+                } else if (button.equals(view.getController().getLitButton2())) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
                     button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
+                    view.getCountDownPanel().setCount(5);
+                   // view.getCountDownPanel().startGameTimer();
                 } else {
-                    JOptionPane.showMessageDialog(null, "You missed the button, You lose!");
+                    button.setBackground(Color.RED);
+                    button.setOpaque(true);
+                    button.setVisible(true);
                 }
                 break;
             }
@@ -147,17 +156,28 @@ public class GamePanel extends JPanel implements KeyListener {
                 if (button == view.getController().getLitButton1()) {
                     button.setBackground(null);
                     button.setOpaque(true);
+                    button.setVisible(true);
                     view.getController().newButton(button);
 
                 } else if (button == view.getController().getLitButton2()) {
                     button.setBackground(null);
                     button.setOpaque(true);
+                    button.setVisible(true);
                     view.getController().newButton(button);
 
-                }/* else {
+                }else {
+                    JOptionPane.showMessageDialog(null, "You missed the button, You lose!");
+                    String name = JOptionPane.showInputDialog("Write your name");
+                    //view.getScoreBoardPanel().addNewScore(name, view.getController().getKeyCount());
+                    try {
+                        view.getController().newScore(name, view.getController().getKeyCount());
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    // TODO: Skicka tillbaka till en startskärm.
                     //   view.getController().startCountDown();
                 }
-                */
+
                 break;
             }
         }
