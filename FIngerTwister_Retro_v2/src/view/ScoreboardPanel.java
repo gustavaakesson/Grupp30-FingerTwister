@@ -1,21 +1,23 @@
 package view;
 
+import model.Scoreboard;
+
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class ScoreboardPanel extends JPanel implements Runnable {
     private View view;
     private JTextArea textArea;
     private int count;
+    Scoreboard scoreboard;
 
     public ScoreboardPanel(View view) throws HeadlessException {
         this.view = view;
         this.textArea = new JTextArea();
         this.textArea.setEditable(false);
         this.add(this.textArea);
+        scoreboard = new Scoreboard();
 
         try {
             this.setTextArea();
@@ -29,6 +31,8 @@ public class ScoreboardPanel extends JPanel implements Runnable {
         Thread thread = new Thread(this);
         thread.start();
     }
+
+
 
     public void setTextArea() throws IOException {
         String str = "";

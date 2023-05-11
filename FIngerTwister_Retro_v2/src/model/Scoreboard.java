@@ -11,6 +11,7 @@ public class Scoreboard {
 
 
 
+
     public Scoreboard(){
         scoreboardArr = new ArrayList<>();
         try {
@@ -34,7 +35,7 @@ public class Scoreboard {
         bufferedWriter.newLine();
         bufferedWriter.close();
     }
-    public boolean checkScoreBoard(int score){
+    public void sortScoreBoard(){
         int minScore = 1000;
         int checkedScore;
         int scores[] = new int[scoreBoard.length];
@@ -45,7 +46,8 @@ public class Scoreboard {
 
            }
         }
-    return false;
+
+
     }
 
 

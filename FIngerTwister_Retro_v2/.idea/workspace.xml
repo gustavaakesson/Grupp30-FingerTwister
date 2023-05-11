@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard">
-      <change afterPath="$PROJECT_DIR$/src/controller/GameMode2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TwisterPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreBoard.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Scoreboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Scoreboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/CountdownPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CountdownPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CountdownPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GameModePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GameModePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" afterDir="false" />
     </list>
@@ -68,7 +70,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard" />
+      <changelist id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first." />
       <created>1680168513509</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -104,13 +106,19 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1683619813509</updated>
     </task>
-    <task id="LOCAL−00006" summary="Working Keyboard">
-      <created>1683637410059</created>
+    <task id="LOCAL−00006" summary="Working Keyboard with some debugging">
+      <created>1683639127455</created>
       <option name="number" value="LOCAL−00006" />
       <option name="presentableId" value="LOCAL−00006" />
-      <updated>1683637410059</updated>
+      <updated>1683639127455</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first.">
+      <created>1683704198584</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1683704198584</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +149,8 @@
     <MESSAGE value="Added empty classes for easier structure with Frames and Panels in the GUI" />
     <MESSAGE value="Halvfärdig omstrukturereing" />
     <MESSAGE value="Working Keyboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Keyboard" />
+    <MESSAGE value="Working Keyboard with some debugging" />
+    <MESSAGE value="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first." />
   </component>
 </project>

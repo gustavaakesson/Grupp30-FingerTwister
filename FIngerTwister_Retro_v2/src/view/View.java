@@ -25,7 +25,8 @@ public class View extends JFrame{
     public View(Controller controller) {
         this.controller = controller;
         this.setLayout(borderLayout);
-        this.setSize(1000,600);
+
+        this.setSize(getMaximumSize());
         createPanels();
         addPanels();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);

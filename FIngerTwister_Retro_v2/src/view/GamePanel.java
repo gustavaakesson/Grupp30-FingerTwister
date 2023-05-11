@@ -5,6 +5,7 @@ import controller.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
@@ -22,11 +23,11 @@ public class GamePanel extends JPanel implements KeyListener {
         this.setSize(new Dimension(480, 250));
         setBounds(200,200,200,200);
         this.setBorder(new LineBorder(Color.BLACK));
-
+        this.setFocusable(true);
         view.add(this);
         createKeyboard();
-        //this.addButtons();
         this.setVisible(true);
+
     }
 
     public void createKeyboard(){
@@ -54,13 +55,15 @@ public class GamePanel extends JPanel implements KeyListener {
 
             for (int col = 0; col < view.getController().getArr()[row].length; ++col){
                 JButton button = new JButton(view.getController().getArr()[row][col]);
+                button.addKeyListener(this);
+                button.setBorderPainted(true);
                 pRow.add(button);
                 view.getController().getButtonArr().add(button);
-                button.addKeyListener(this);
             }
 
             this.add(pRow, c);
         }
+
     }
 /*
     private void addButtons() {
@@ -83,16 +86,21 @@ public class GamePanel extends JPanel implements KeyListener {
  */
     public void makeLitButton(JButton lightUpButton) {
         lightUpButton.setBackground(Color.YELLOW);
+        lightUpButton.setOpaque(true);
+        lightUpButton.setVisible(true);
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("You typed: "+e.getKeyChar());
+       // System.out.println("You typed: "+e.getExtendedKeyCode());
+       // System.out.println(e.getSource().toString());
 
     }
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("You pressed: "+e.getKeyChar());
+        System.out.println("You pressed: "+KeyEvent.getKeyText(e.getKeyCode()));
+
+
 
         if (view.isTimesUp()) {
             String name = JOptionPane.showInputDialog(null, "Times Up! Your score = " + view.getController().getKeyCount() + " Enter your name: ");
@@ -104,22 +112,30 @@ public class GamePanel extends JPanel implements KeyListener {
 
         }
 
-        System.out.println(e.getKeyChar());
 
         for (JButton button : view.getController().getButtonArr()) {
-            if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))   ) {
-                if (button == view.getController().getLitButton1()) {
+            if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))) {
+                if (button.equals(view.getController().getLitButton1())) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
+                    button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
-                } else if (button == view.getController().getLitButton2()) {
+                    view.getCountDownPanel().setCount(5);
+                  //  view.getCountDownPanel().startGameTimer();
+
+
+
+                } else if (button.equals(view.getController().getLitButton2())) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
+                    button.setVisible(true);
                     view.getController().setKeyCount(view.getController().getKeyCount() + 1);
+                    view.getCountDownPanel().setCount(5);
+                   // view.getCountDownPanel().startGameTimer();
                 } else {
-                    JOptionPane.showMessageDialog(null, "You missed the button, You lose!");
+                    button.setBackground(Color.RED);
+                    button.setOpaque(true);
+                    button.setVisible(true);
                 }
                 break;
             }
@@ -129,28 +145,40 @@ public class GamePanel extends JPanel implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println("You pressed "+e.getKeyChar());
+        System.out.println("You released "+e.getKeyChar());
+
 
         for (JButton button : view.getController().getButtonArr()) {
             if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))) {
                 if (button == view.getController().getLitButton1()) {
                     button.setBackground(null);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
+                    button.setVisible(true);
                     view.getController().newButton(button);
 
                 } else if (button == view.getController().getLitButton2()) {
                     button.setBackground(null);
                     button.setOpaque(true);
-                    button.setBorderPainted(false);
+                    button.setVisible(true);
                     view.getController().newButton(button);
 
-                }/* else {
+                }else {
+                    JOptionPane.showMessageDialog(null, "You missed the button, You lose!");
+                    String name = JOptionPane.showInputDialog("Write your name");
+                    //view.getScoreBoardPanel().addNewScore(name, view.getController().getKeyCount());
+                    try {
+                        view.getController().newScore(name, view.getController().getKeyCount());
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    // TODO: Skicka tillbaka till en startskärm.
                     //   view.getController().startCountDown();
                 }
-                */
+
                 break;
             }
         }
+
+
     }
 }
