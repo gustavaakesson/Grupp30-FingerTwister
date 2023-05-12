@@ -67,11 +67,13 @@ public class View extends JFrame{
         this.add((gamePanel),BorderLayout.CENTER);
         this.add((scoreBoardPanel),BorderLayout.WEST);
     }
-
+/*
     public void startGameMode2(){
         TwisterPanel twister = new TwisterPanel(this);
         this.add(twister);
     }
+
+ */
 /*
     public void keyTyped(KeyEvent e) {
         System.out.println(e.getKeyChar());
