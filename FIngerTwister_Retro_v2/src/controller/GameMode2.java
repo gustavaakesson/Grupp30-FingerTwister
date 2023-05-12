@@ -5,10 +5,8 @@ import view.View;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
 
 public class GameMode2 implements Runnable{
-
     private Controller controller;
     private View view;
     private boolean running = true;
@@ -18,8 +16,6 @@ public class GameMode2 implements Runnable{
     private int player2Counter;
     private boolean player1Lost = false;
     private boolean player2Lost = false;
-
-
     public GameMode2(View view) {
         this.view = view;
     }
@@ -29,7 +25,7 @@ public class GameMode2 implements Runnable{
         if (player1.size() == 4){
             player2.remove(0);
         }
-        player1.add(controller.randomize_new_button());
+        player1.add(controller.randomizeNewButton());
     }
 
     public void nextButtonP2(){
@@ -37,7 +33,7 @@ public class GameMode2 implements Runnable{
         if (player1.size() == 4){
             player1.remove(0);
         }
-        player1.add(controller.randomize_new_button());
+        player1.add(controller.randomizeNewButton());
     }
 
     @Override
@@ -47,7 +43,6 @@ public class GameMode2 implements Runnable{
 
     public void startGameMode2(){
         if (running) {
-
             if (player2 == null) {
                 nextButtonP1();
             } else {
@@ -60,11 +55,12 @@ public class GameMode2 implements Runnable{
 
         if (running) {
 
+            if (checkStatus()) {
+                JOptionPane.showMessageDialog(null, "A player lost");
+            }
             if (player2 == null) {
                 nextButtonP1();
-            } else if (checkStatus()) {
-                JOptionPane.showMessageDialog(null, "A player lost");
-            } else {
+            }else {
                 nextButtonP1();
                 nextButtonP2();
             }

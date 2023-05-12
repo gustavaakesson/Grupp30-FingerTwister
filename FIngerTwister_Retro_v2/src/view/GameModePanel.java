@@ -97,15 +97,14 @@ public class GameModePanel extends JPanel implements ActionListener {
             }
         }
 
-        if (e.getSource() == getGameModeChoser()){
-            for ( int i = 0; i < choices.length;i++ ){
-                if (e.getSource() == "FingerTwister"){
-                    JOptionPane.showMessageDialog(null,"You are now playing FingerTwister!");
-                }
-                if (e.getSource() == "TypingRace"){
-                    JOptionPane.showMessageDialog(null,"You are now playing TypingRace!");
-                }
+        if (e.getSource() instanceof JComboBox){
+            if (((JComboBox<?>) e.getSource()).getSelectedItem() == "FingerTwister"){
+                JOptionPane.showMessageDialog(null,"You are now playing FingerTwister!");
             }
+            if (((JComboBox<?>) e.getSource()).getSelectedItem() == "TypingRace"){
+                JOptionPane.showMessageDialog(null,"You are now playing TypingRace!");
+            }
+
         }
     }
 

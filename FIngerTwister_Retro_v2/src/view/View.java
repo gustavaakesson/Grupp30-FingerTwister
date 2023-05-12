@@ -28,10 +28,9 @@ public class View extends JFrame{
 
     public void setupFrame(){
         this.setLayout(borderLayout);
-        this.setSize(getMaximumSize());
+        this.setSize(this.getMaximumSize());
         createPanels();
         addPanels();
-        this.setBackground(Color.BLACK);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -188,7 +187,16 @@ public class View extends JFrame{
         return controller;
     }
 
+    @Override
+    public void add(Component comp, Object constraints) {
+        super.add(comp, constraints);
+    }
+
     public void setController(Controller controller) {
         this.controller = controller;
+    }
+
+    public void add(GameMode2 gameMode2, String center) {
+        this.add(gameMode2, center);
     }
 }

@@ -10,32 +10,30 @@ import model.*;
 // (powered by FernFlower decompiler)
 //
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Objects;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.Timer;
 
-public class Controller implements ActionListener, Runnable {
+public class Controller implements ActionListener {
     private final String[][] arr = {
-            {"\u001B", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "\u232B"},
-            {"\u21E5", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "Å", "¨", "'"},
-            {"\u21EA", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Ö", "Ä", "\u23CE"},
-            {"\u21E7", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "-", "\u21E7", "\u2191"},
-            {"fn", "\u2190", "\u2193", "\u2192"}};
+            {"§", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "´", "Backspace"},
+            {"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "Å", "¨", "'"},
+            {"CAPS LOCK", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Ö", "Ä", "Enter"},
+            {"Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "-", "Shift"},
+            {"Ctrl", "Fn", "Space", "AltGr"}};
     private View view ;
     private ArrayList<JButton> buttonArr = new ArrayList<>();
     private JButton litButton1;
     private JButton litButton2;
     private Timer timer = new Timer(5000, this);
-    private Thread thread;
-    private StartingWindow startingWindow;
     private Scoreboard scoreBoard;
     private int keyCount;
     private GameMode2 gm2;
@@ -45,16 +43,16 @@ public class Controller implements ActionListener, Runnable {
     }
 
     public void startGame() {
-        this.litButton1 = this.randomize_new_button();
-        this.litButton2 = this.randomize_new_button();
+        this.litButton1 = this.randomizeNewButton();
+        this.litButton2 = this.randomizeNewButton();
         view.getCountDownPanel().startGameTimer();
 
         while(Objects.equals(this.litButton2.getText(), this.litButton1.getText())){
-            this.litButton2 = this.randomize_new_button();
-            this.litButton1 = this.randomize_new_button();
+            this.litButton2 = this.randomizeNewButton();
+            this.litButton1 = this.randomizeNewButton();
        }
     }
-    public JButton randomize_new_button() {
+    public JButton randomizeNewButton() {
         JButton jButton = null;
         Random random = new Random();
         int randomInt = random.nextInt(this.arr.length - 1);
@@ -94,11 +92,11 @@ public class Controller implements ActionListener, Runnable {
     }
     public void newButton(JButton button) {
         if (button == this.litButton1) {
-            this.litButton1 = this.randomize_new_button();
+            this.litButton1 = this.randomizeNewButton();
         }
 
         if (button == this.litButton2) {
-            this.litButton2 = this.randomize_new_button();
+            this.litButton2 = this.randomizeNewButton();
         }
 
     }
@@ -126,24 +124,11 @@ public class Controller implements ActionListener, Runnable {
 
     }
     public void runGm2(){
-        new GameMode2(view);
+        view.add(new GameMode2(view), BorderLayout.CENTER);
     }
-    public void run() {
-        this.startGame();
-    }
-
-    public Thread getThread() {
-        return this.thread;
-    }
-
-    public void setThread(Thread thread) {
-        this.thread = thread;
-    }
-
     public void nextGame() {
         this.view = new View(this);
     }
-
     public JButton getLitButton1() {
         return this.litButton1;
     }
@@ -151,20 +136,15 @@ public class Controller implements ActionListener, Runnable {
     public JButton getLitButton2() {
         return this.litButton2;
     }
-
-
     public int getKeyCount() {
         return keyCount;
     }
-
     public void setKeyCount(int keyCount) {
         this.keyCount = keyCount;
     }
-
     public GameMode2 getGm2() {
         return gm2;
     }
-
     public void setGm2(GameMode2 gm2) {
         this.gm2 = gm2;
     }

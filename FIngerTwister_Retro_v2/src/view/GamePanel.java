@@ -115,7 +115,7 @@ public class GamePanel extends JPanel implements KeyListener {
 
 
         for (JButton button : view.getController().getButtonArr()) {
-            if (button.getText().equalsIgnoreCase(String.valueOf(e.getKeyChar()))) {
+            if (button.getText().equalsIgnoreCase(KeyEvent.getKeyText(e.getKeyCode()))) {
                 if (button.equals(view.getController().getLitButton1())) {
                     button.setBackground(Color.GREEN);
                     button.setOpaque(true);

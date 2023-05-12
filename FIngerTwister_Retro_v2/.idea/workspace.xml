@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d3357fe9-fcba-4d82-baf9-b53e29e94904" name="Changes" comment="har finslipat lite saker och ting!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GameModePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GameModePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreBoard.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JframeTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/GameMode2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GameMode2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CountdownPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CountdownPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GameModePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GameModePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +132,13 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1683840822595</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="har finslipat lite saker och ting!">
+      <created>1683891006274</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1683891006274</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,5 +173,21 @@
     <MESSAGE value="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first." />
     <MESSAGE value="har finslipat lite saker och ting!" />
     <option name="LAST_COMMIT_MESSAGE" value="har finslipat lite saker och ting!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/view/GameModePanel.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/view/GameModePanel.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
