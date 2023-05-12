@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3357fe9-fcba-4d82-baf9-b53e29e94904" name="Changes" comment="har finslipat lite saker och ting!" />
+    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard">
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,16 +36,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/senna/OneDrive/Dokument/GitHub/Test-Grupp30/FIngerTwister_Retro_v2&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/theod/Kurser/Systemutveckling & Projekt/FingerTwister/Kod/Grupp30-FingerTwister/FIngerTwister_Retro_v2",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -56,7 +58,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d3357fe9-fcba-4d82-baf9-b53e29e94904" name="Changes" comment="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first." />
+      <changelist id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard" />
       <created>1680168513509</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -92,25 +94,7 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1683619813509</updated>
     </task>
-    <task id="LOCAL−00006" summary="Working Keyboard with some debugging">
-      <created>1683639127455</created>
-      <option name="number" value="LOCAL−00006" />
-      <option name="presentableId" value="LOCAL−00006" />
-      <updated>1683639127455</updated>
-    </task>
-    <task id="LOCAL−00007" summary="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first.">
-      <created>1683704198584</created>
-      <option name="number" value="LOCAL−00007" />
-      <option name="presentableId" value="LOCAL−00007" />
-      <updated>1683704198584</updated>
-    </task>
-    <task id="LOCAL−00008" summary="har finslipat lite saker och ting!">
-      <created>1683830685814</created>
-      <option name="number" value="LOCAL−00008" />
-      <option name="presentableId" value="LOCAL−00008" />
-      <updated>1683830685814</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,9 +125,6 @@
     <MESSAGE value="Added empty classes for easier structure with Frames and Panels in the GUI" />
     <MESSAGE value="Halvfärdig omstrukturereing" />
     <MESSAGE value="Working Keyboard" />
-    <MESSAGE value="Working Keyboard with some debugging" />
-    <MESSAGE value="Working Keyboard with some debugging done and now working directly after countdown without pressing the keyboard in the GUI first." />
-    <MESSAGE value="har finslipat lite saker och ting!" />
-    <option name="LAST_COMMIT_MESSAGE" value="har finslipat lite saker och ting!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Keyboard" />
   </component>
 </project>
