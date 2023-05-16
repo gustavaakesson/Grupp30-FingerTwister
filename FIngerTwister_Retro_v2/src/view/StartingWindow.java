@@ -1,4 +1,4 @@
-package view;
+/*package view;
 
 import controller.Controller;
 
@@ -44,3 +44,4 @@ public class StartingWindow extends JFrame {
         this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
     }
 }
+*/

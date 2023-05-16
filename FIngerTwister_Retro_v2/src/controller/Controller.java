@@ -35,8 +35,12 @@ public class Controller implements ActionListener, Runnable {
     private JButton litButton2;
     private Timer timer = new Timer(5000, this);
     private Thread thread;
+<<<<<<< HEAD
     private StartingWindow startingWindow;
     private Scoreboard scoreBoard;
+=======
+    private ScoreBoardViewer scoreBoard;
+>>>>>>> main
     private int keyCount;
     private GameMode2 gm2;
 
