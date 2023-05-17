@@ -108,7 +108,7 @@ public class GamePanel extends JPanel implements KeyListener {
         if (view.isTimesUp()) {
             String name = JOptionPane.showInputDialog(null, "Times Up! Your score = " + view.getController().getKeyCount() + " Enter your name: ");
             try {
-                view.getController().setNewScore(name, view.getController().getKeyCount());
+                view.getController().setNewScore(name);
             } catch (IOException var4) {
                 throw new RuntimeException(var4);
             }
@@ -168,7 +168,12 @@ public class GamePanel extends JPanel implements KeyListener {
                 }else {
                     JOptionPane.showMessageDialog(null, "You missed the button, You lose!");
                     String name = JOptionPane.showInputDialog("Write your name");
-                    //view.getScoreBoardPanel().addNewScore(name, view.getController().getKeyCount());
+                    //view.getScoreBoardPanel().addNewScore.(name, (view.getController().getKeyCount()));
+                    try {
+                        view.getController().setNewScore(name);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
                     try {
                         view.getController().newScore(name, view.getController().getKeyCount());
                     } catch (IOException ex) {

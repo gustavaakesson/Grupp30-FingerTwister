@@ -39,7 +39,7 @@ public class Controller implements ActionListener, Runnable {
     private Scoreboard scoreBoard;
     private int keyCount;
 
-    public Controller() {
+    public Controller() throws IOException {
         this.view = new View(this);
     }
 
@@ -84,12 +84,18 @@ public class Controller implements ActionListener, Runnable {
         this.timer = timer;
     }
 
-    public void setNewScore(String name, int score) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("ScoreBoard.txt", true));
-        String playerNameScore = String.format(" Name: %s Score: %d", name, score);
+    public void setNewScore(String name) throws IOException {
+       /* BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("ScoreBoard.txt", true));
+        String playerNameScore = String.format(" Name: %s Score: %d", name, getKeyCount());
         bufferedWriter.write(playerNameScore);
         bufferedWriter.newLine();
         bufferedWriter.close();
+
+        */
+
+
+        this.scoreBoard.setNewScore(name, getKeyCount());
+        setKeyCount(0);
     }
     public void newButton(JButton button) {
         if (button == this.litButton1) {
@@ -137,7 +143,7 @@ public class Controller implements ActionListener, Runnable {
         this.thread = thread;
     }
 
-    public void nextGame() {
+    public void nextGame() throws IOException {
         this.view = new View(this);
     }
 

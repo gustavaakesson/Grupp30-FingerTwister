@@ -1,22 +1,28 @@
 package view;
 
+import model.Score;
 import model.Scoreboard;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.util.ArrayList;
 
 public class ScoreboardPanel extends JPanel implements Runnable {
     private View view;
     private JTextArea textArea;
     private int count;
-    Scoreboard scoreboard;
+    private Scoreboard scoreboard;
+    private ArrayList<Score> scores;
 
-    public ScoreboardPanel(View view) throws HeadlessException {
+
+    public ScoreboardPanel(View view) throws HeadlessException, IOException {
+        this.view = view;
         this.textArea = new JTextArea();
         this.textArea.setEditable(false);
         this.add(this.textArea);
         scoreboard = new Scoreboard();
+
 
         try {
             this.setTextArea();
@@ -33,8 +39,10 @@ public class ScoreboardPanel extends JPanel implements Runnable {
 
 
 
+
     public void setTextArea() throws IOException {
         String str = "";
+        String sb = "";
         FileReader fr = new FileReader("ScoreBoard.txt");
         BufferedReader br = new BufferedReader(fr);
 
@@ -42,9 +50,24 @@ public class ScoreboardPanel extends JPanel implements Runnable {
             str = str + br.readLine() + "\n";
             ++this.count;
         }
+        this.scores = scoreboard.getScoreboard();
+
+        for(int i=0; i<scores.size(); i++){
+            String name = scores.get(i).getName();
+            int score = scores.get(i).getScore();
+            sb = sb+String.format("Name: 10%s, Score: 10%s"+"\n", name, score);
+        }
+
 
         fr.close();
         this.textArea.setText(str);
+
+
+
+
+
+
+
     }
 
     public void run() {

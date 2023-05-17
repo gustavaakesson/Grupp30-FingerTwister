@@ -6,6 +6,7 @@ package view;//
 import controller.*;
 
 import java.awt.*;
+import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -22,7 +23,7 @@ public class View extends JFrame{
     private Controller controller;
     private boolean timesUp = false;
     private BorderLayout borderLayout = new BorderLayout();
-    public View(Controller controller) {
+    public View(Controller controller) throws IOException {
         this.controller = controller;
         this.setLayout(borderLayout);
 
@@ -57,7 +58,7 @@ public class View extends JFrame{
     }
 
  */
-    private void createPanels() {
+    private void createPanels() throws IOException {
         startingPanel = new GameModePanel(this);
         gamePanel = new GamePanel(this);
         scoreBoardPanel = new ScoreboardPanel(this);
