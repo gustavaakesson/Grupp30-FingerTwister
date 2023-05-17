@@ -8,9 +8,6 @@ import java.io.*;
 
 public class ScoreboardPanel extends JPanel implements Runnable {
     private View view;
-    private JLabel emptyLabel;
-    private JLabel emptyLabel1;
-
     private JTextArea textArea;
     private int count;
     Scoreboard scoreboard;
@@ -18,13 +15,6 @@ public class ScoreboardPanel extends JPanel implements Runnable {
     public ScoreboardPanel(View view) throws HeadlessException {
         this.view = view;
         this.textArea = new JTextArea();
-
-        this.emptyLabel = new JLabel();
-        this.emptyLabel1 = new JLabel();
-        emptyLabel.setPreferredSize(new Dimension(100,0));
-        emptyLabel1.setPreferredSize(new Dimension(100,0));
-
-
 
         /*
         JLabel scoreBoardText = new JLabel("Scoreboard");
@@ -39,9 +29,7 @@ public class ScoreboardPanel extends JPanel implements Runnable {
         textArea.setBackground(null);
 
         this.textArea.setEditable(false);
-        //this.add(emptyLabel1);
         this.add(this.textArea);
-        this.add(emptyLabel);
         scoreboard = new Scoreboard();
 
         try {

@@ -11,7 +11,6 @@ import javax.swing.border.Border;
 
 public class View extends JFrame{
     private JPanel panel;
-    private JPanel emptyPanel;
 
     private GamePanel gamePanel;
     private gamePanelManager gamePanelManager;
@@ -29,7 +28,7 @@ public class View extends JFrame{
 
     public void setupFrame(){
         this.setLayout(borderLayout);
-        this.setSize(new Dimension(1920,1080));
+        this.setSize(this.getMaximumSize());
         createPanels();
         addPanels();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -55,11 +54,6 @@ public class View extends JFrame{
     }
 
  */
-
-    private void startMenuPanels(){
-        gameModeSelection gameModeSelection = new gameModeSelection(this);
-
-    }
     private void createPanels() {
         startingPanel = new GameModePanel(this);
         gamePanel = new GamePanel(this);
