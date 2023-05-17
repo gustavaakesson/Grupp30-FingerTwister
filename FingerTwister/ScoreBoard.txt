@@ -1,7 +1,0 @@
- Name: Hannes Score: 25
- Name: Staffan Score: 4
- Name: Hannes Högström Score: 38
- Name: Inte Theo Score: 27
- Name: Hannes Score: 9
- Name: Hannes Score: 20
- Name: Hannes Score: 15
