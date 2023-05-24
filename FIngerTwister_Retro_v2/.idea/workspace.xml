@@ -5,25 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartMenu$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingWindow$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/StartingWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/VersionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/VersionPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/VersionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/VersionPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

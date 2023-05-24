@@ -56,11 +56,11 @@ public class StartMenu {
                 "<html>With simple gameplay and a fast-paced soundtrack, Keyboard Rush is a fun and addictive game that will test your typing skills and reflexes.<br>"
                         + "So, get ready to hit the keys and try to top the leaderboard!");
 
-        singlePlayerDescription.setBounds(240, 660, 600, 200);
+        singlePlayerDescription.setBounds(240, 670, 600, 200);
         singlePlayerDescription.setFont(new Font("SansSerif", Font.PLAIN, 16));
         frame.add(singlePlayerDescription);
 
-        frame.setSize(1920, 1080);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 

@@ -29,6 +29,7 @@ public class View extends JFrame{
         createPanels();
         addPanels();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         // this.panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
        // addButtons();
