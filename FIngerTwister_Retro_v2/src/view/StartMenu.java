@@ -12,23 +12,25 @@ public class StartMenu {
         frame.setLayout(null);
 
         JButton multiplayerButton = new JButton("Multiplayer");
-        multiplayerButton.setBounds(120, 200, 600, 80);
+        multiplayerButton.setBounds(240, 270, 600, 80);
+        multiplayerButton.setFont(new Font("SansSerif", Font.PLAIN, 34));
         frame.add(multiplayerButton);
 
-        JButton singlePlayerButton = new JButton("Single-player");
-        singlePlayerButton.setBounds(120, 600, 600, 80);
+        JButton singlePlayerButton = new JButton("Singleplayer");
+        singlePlayerButton.setBounds(240, 650, 600, 80);
+        singlePlayerButton.setFont(new Font("SansSerif", Font.PLAIN, 34));
         frame.add(singlePlayerButton);
 
         JLabel titel = new JLabel("FingerTwister");
         Font font = new Font("SansSerif", Font.PLAIN, 100);
         titel.setFont(font);
-        titel.setBounds(625, 20, 800 , 100);
+        titel.setBounds(700, 40, 800 , 120);
         frame.add(titel);
 
         JLabel scoreboardTitle = new JLabel("Scoreboard");
         Font scoreboardfont = new Font("SansSerif", Font.PLAIN, 50);
         scoreboardTitle.setFont(scoreboardfont);
-        scoreboardTitle.setBounds(1400, 170, 400, 50);
+        scoreboardTitle.setBounds(1470, 170, 400, 50);
         frame.add(scoreboardTitle);
 
 
@@ -46,17 +48,19 @@ public class StartMenu {
                         + "For example, you will both be instructed to place your finger on the key glowing in your color, whoever last the longest win!<br>"
                         + "So get ready to have ur fingers twisted ");
 
-        multiPlayerDescription.setBounds(120, 290, 1000, 80);
+        multiPlayerDescription.setBounds(240, 320, 600, 200);
+        multiPlayerDescription.setFont(new Font("SansSerif", Font.PLAIN, 16));
         frame.add(multiPlayerDescription);
 
         JLabel singlePlayerDescription = new JLabel(
                 "<html>With simple gameplay and a fast-paced soundtrack, Keyboard Rush is a fun and addictive game that will test your typing skills and reflexes.<br>"
                         + "So, get ready to hit the keys and try to top the leaderboard!");
 
-        singlePlayerDescription.setBounds(120, 680, 900, 80);
+        singlePlayerDescription.setBounds(240, 660, 600, 200);
+        singlePlayerDescription.setFont(new Font("SansSerif", Font.PLAIN, 16));
         frame.add(singlePlayerDescription);
 
-        frame.setSize(300, 200);
+        frame.setSize(1920, 1080);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
