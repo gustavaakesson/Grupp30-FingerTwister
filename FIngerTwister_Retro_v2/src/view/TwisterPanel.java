@@ -56,7 +56,7 @@ public class TwisterPanel extends JPanel implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         System.out.println("You pressed: " + e.getKeyChar());
-
+/*
         for (JButton b : view.getController().getGm2().getPlayer1()) {
             if (e.getSource() instanceof JButton) {
                 if (String.valueOf(e.getKeyChar()).equals(b.getText())) {
@@ -68,6 +68,8 @@ public class TwisterPanel extends JPanel implements KeyListener {
                 view.getController().getGm2().setPlayer1Lost(true);
             }
         }
+        */
+
     }
 
     @Override

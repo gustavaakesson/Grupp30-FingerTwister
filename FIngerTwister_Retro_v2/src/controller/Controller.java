@@ -43,6 +43,7 @@ public class Controller implements ActionListener, Runnable {
 
     public Controller() {
         this.view = new View(this);
+        gm2 = new GameMode2(view);
     }
 
     public void startGame() {

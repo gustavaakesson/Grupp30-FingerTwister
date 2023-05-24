@@ -58,8 +58,9 @@ public class GameModePanel extends JPanel implements ActionListener {
                 view.getGamePanel().transferFocus();
                 //view.getGamePanel().createKeyboard();
                 //view.setGamePanel(new GamePanel(view));
-                view.getController().startGame();
 
+                //Detta borde fungera men bör kollas upp om keylisteners endast fungerar på panels och frames!
+                view.getController().getGm2().run();
             }
         }
 

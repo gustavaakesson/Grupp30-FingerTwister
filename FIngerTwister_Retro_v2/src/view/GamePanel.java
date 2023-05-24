@@ -93,6 +93,22 @@ public class GamePanel extends JPanel implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
+
+    /*
+    @Override
+    public void keyTyped(KeyEvent e) {
        // System.out.println("You typed: "+e.getExtendedKeyCode());
        // System.out.println(e.getSource().toString());
 
@@ -182,4 +198,5 @@ public class GamePanel extends JPanel implements KeyListener {
 
 
     }
+    */
 }
