@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard">
+    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Uppdaterade gitignore fil att vara mer specifik mot xml filen">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1683619813509</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Uppdaterade gitignore fil att vara mer specifik mot xml filen">
+      <created>1685012838857</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1685012838857</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +131,7 @@
     <MESSAGE value="Added empty classes for easier structure with Frames and Panels in the GUI" />
     <MESSAGE value="Halvfärdig omstrukturereing" />
     <MESSAGE value="Working Keyboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Keyboard" />
+    <MESSAGE value="Uppdaterade gitignore fil att vara mer specifik mot xml filen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uppdaterade gitignore fil att vara mer specifik mot xml filen" />
   </component>
 </project>
