@@ -4,36 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Working Keyboard">
-      <change afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Score.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScoreBoard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ScoreBoard.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Score.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Scoreboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/model/Scoreboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreBoardViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreBoardViewer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ScoreBoardViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ScoreBoardViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ScoreboardPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
+        <entry key="$PROJECT_DIR$/.." value="mainHannes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />

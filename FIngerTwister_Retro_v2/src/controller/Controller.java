@@ -103,9 +103,19 @@ public class Controller implements ActionListener, Runnable {
         }
 
     }
-    public void newScore(String name, int score) throws IOException {
+
+    public void newScoreboard(){
         this.scoreBoard = new Scoreboard();
+    }
+    public void newScore(String name, int score) throws IOException {
+
         this.scoreBoard.setNewScore(name, score);
+    }
+    public Scoreboard getScoreBoard(){
+        if(scoreBoard == null){
+            newScoreboard();
+        }
+        return scoreBoard;
     }
 
     public String[][] getArr() {
