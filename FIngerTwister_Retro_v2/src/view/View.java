@@ -165,6 +165,9 @@ public class View extends JFrame{
     }
 
     public CountdownPanel getCountDownPanel() {
+        if(countDownPanel == null) {
+            countDownPanel = new CountdownPanel(this);
+        }
         return countDownPanel;
     }
 
