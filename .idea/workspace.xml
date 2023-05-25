@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386c9fb1-f3ed-4668-a684-eff262daa01d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingWindow$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/StartingWindow.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/model/Score.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/model/Scoreboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/model/Scoreboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/ScoreboardPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/FIngerTwister_Retro_v2/out/production/FIngerTwister_Retro/view/View.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +17,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Omstrukturering_Gustav" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
