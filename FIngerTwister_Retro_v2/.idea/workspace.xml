@@ -3,6 +3,7 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+
   <component name="ChangeListManager">
     <list default="true" id="c87399ca-f5ca-4f2a-9200-83ede82532a7" name="Changes" comment="Uppdaterade gitignore fil att vara mer specifik mot xml filen">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
