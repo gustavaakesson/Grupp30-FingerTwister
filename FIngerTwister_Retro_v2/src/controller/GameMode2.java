@@ -35,26 +35,7 @@ public class GameMode2 implements Runnable, KeyListener {
 
     // Detta ÄR algoritmen som fixar att det blir random tecken
 
-    /**
-     * This method generates random characters from an array of predefined keyboard characters and ensures that no duplicates are present in both randomly generated arrays.
-     * <p>
-     * The keyboard characters are stored in a char array named keyboardChars.
-     * <p>
-     * Two empty char arrays are created, named randomChars1 and randomChars2.
-     * <p>
-     * The randomizeChar() method is used to generate random characters for the given array and compare it with another array to ensure there are no duplicates.
-     * <p>
-     * The method takes the following parameters:
-     *
-     * @param randomChar      An empty char array to store the randomly generated characters.
-     * @param comparisonArray The array to compare the generated characters with to ensure there are no duplicates.
-     * @param arrayNumber     An integer value representing the number of the array being processed.
-     *                        <p>
-     *                        The runRandomizer() method is used to generate 30 sets of random characters.
-     *                        It calls the randomizeChar() method twice for each set of characters and updates the index value accordingly.
-     *                        The class uses the Random class to generate random numbers.
-     * @author Theodor Bäckstrand.
-     */
+
     public void runRandomizer() {
         //Detta kommer behövas ändras!!!!!!!!
         randomizeChar(randomChars1, randomChars2, 1);
